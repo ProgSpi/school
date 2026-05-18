@@ -11,9 +11,11 @@ school/
 ├── index.html           # Haupt-Frontend (Standalone-Fallback)
 ├── questions/           # Fragen-Datensätze – nach Fach gruppiert
 │   └── english/         # Unterrichtsfach: Englisch
-│       ├── q_simple_present.js   # var: questions
-│       ├── q_simple_past.js      # var: questionsPast
-│       └── q_telling_time.js     # var: questionsTellingTime
+│       ├── q_simple_present.js      # var: questions
+│       ├── q_simple_past.js         # var: questionsPast
+│       ├── q_telling_time.js        # var: questionsTellingTime
+│       ├── q_reading_present.js     # var: questionsReadingPresent (4 texts × 20 blanks)
+│       └── q_reading_past.js        # var: questionsReadingPast    (4 texts × 20 blanks)
 ├── api/                 # PHP-API-Endpunkte
 │   └── progress.php
 ├── config/              # PHP-Konfiguration
@@ -31,6 +33,14 @@ school/
 ## Quiz-Zusammensetzung
 Jeder Test enthält **immer 20 Fragen: 16 normale + 4 extra schwere** (hard: true).
 `pickQuestions()` in index.html trennt den Pool und zieht getrennt.
+
+## Lesetext-Quiz
+Lesetext-Modi (`readingPresent`, `readingPast`, `readingMixed`) wählen 1 zufälligen Text aus dem Pool.
+Jeder Text hat 20 Dropdown-Lücken (`[0]`–`[19]` in `story.story`).
+`startQuiz(modeKey)` leitet Reading-Modi an `startReadingTest()` weiter.
+
+## Hint-Toggle
+Text-Eingabe-Fragen mit `hint`-Feld zeigen einen "💡 Tipp anzeigen"-Button statt den Hint direkt.
 
 ## Agenten-Richtlinien
 - Lies `.agents/architecture` bevor du strukturelle Änderungen machst

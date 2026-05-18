@@ -27,6 +27,16 @@
 - [x] Test-Abbrechen-Funktion: Button + Inline-Confirm-Banner im Quiz-Screen
 - [x] Mixed Mode erweitert auf alle 3 englischen Themen (300 Fragen im Pool)
 
+### Abgeschlossen (Runde 3)
+- [x] Hint-Toggle: Tipp hinter "💡 Tipp anzeigen"-Button versteckt
+- [x] Lesetext-Quiz: 3 neue Modi (readingPresent, readingPast, readingMixed)
+  - `questions/english/q_reading_present.js` – 4 Texte × 20 Dropdowns
+  - `questions/english/q_reading_past.js`    – 4 Texte × 20 Dropdowns
+  - Neuer Screen `#reading` mit Abort-Funktion
+  - Notenberechnung wie beim normalen Quiz
+  - Dynamische `/ total`-Anzeige im Ergebnis-Screen
+- [x] `startQuiz()` als einheitlicher Einstiegspunkt (leitet zu startNewTest oder startReadingTest)
+
 ### In Arbeit
 - [ ] PHP-Backend
   - `index.php` – PHP-Einstiegspunkt

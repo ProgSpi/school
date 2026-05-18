@@ -548,6 +548,56 @@
     margin-bottom: 4px;
   }
   .q-hint::before { content: '✎ '; color: var(--coral); }
+  .q-hint-wrap { margin-top: 0.5rem; }
+  .btn-hint-toggle {
+    background: none;
+    border: 1px solid var(--gold);
+    color: var(--forest);
+    border-radius: 6px;
+    padding: 0.2rem 0.75rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin-bottom: 0.3rem;
+    transition: background 0.15s;
+  }
+  .btn-hint-toggle:hover { background: var(--gold-soft); }
+
+  /* ========= READING SCREEN ========= */
+  .reading-screen { max-width: 720px; margin: 0 auto; padding: 1rem 1rem 2rem; }
+  .reading-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .reading-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    color: var(--forest-deep);
+    margin: 0.5rem 0 0.25rem;
+  }
+  .reading-story {
+    line-height: 2.4;
+    font-size: 1.05rem;
+    background: var(--bg-card);
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    margin: 1rem 0;
+    border: 1.5px solid var(--border);
+  }
+  .story-select {
+    font-size: 0.95rem;
+    border: 2px solid var(--forest);
+    border-radius: 4px;
+    padding: 0.15rem 0.4rem;
+    background: white;
+    color: var(--forest);
+    cursor: pointer;
+    margin: 0 2px;
+    font-family: inherit;
+  }
+  .story-select:focus { outline: 2px solid var(--forest-deep); }
 
   /* ========= MC OPTIONS ========= */
   .options {
@@ -993,6 +1043,30 @@
           <div class="mode-title">Mixed Mode</div>
           <div class="mode-desc">Alle Themen <em>bunt gemischt</em> – die Königsdisziplin.<br><span class="ex">Erkennst du alles?</span></div>
           <div class="mode-meta">360 Fragen im Pool</div>
+          <div class="mode-cta">Test starten →</div>
+        </button>
+
+        <button class="mode-card" data-mode="readingPresent">
+          <div class="mode-icon">📖</div>
+          <div class="mode-title">Lesetext – Present</div>
+          <div class="mode-desc">Lückentext mit <em>Simple Present</em> – 20 Felder ausfüllen.<br><span class="ex">She <strong>____</strong> tennis every day.</span></div>
+          <div class="mode-meta">Lückentext · 20 Dropdowns</div>
+          <div class="mode-cta">Test starten →</div>
+        </button>
+
+        <button class="mode-card" data-mode="readingPast">
+          <div class="mode-icon">📖</div>
+          <div class="mode-title">Lesetext – Past</div>
+          <div class="mode-desc">Lückentext mit <em>Simple Past</em> – 20 Felder ausfüllen.<br><span class="ex">She <strong>____</strong> tennis yesterday.</span></div>
+          <div class="mode-meta">Lückentext · 20 Dropdowns</div>
+          <div class="mode-cta">Test starten →</div>
+        </button>
+
+        <button class="mode-card mode-card-mixed" data-mode="readingMixed">
+          <div class="mode-icon">📖</div>
+          <div class="mode-title">Lesetext – Mixed</div>
+          <div class="mode-desc">Present &amp; Past gemischt – erkennst du den Unterschied?<br><span class="ex">Present oder Past?</span></div>
+          <div class="mode-meta">Lückentext · 20 Dropdowns</div>
           <div class="mode-cta">Test starten →</div>
         </button>
       </div>
@@ -1526,7 +1600,10 @@
       <div class="q-num" id="qnum">Frage 1</div>
       <div class="q-type" id="qtype">Multiple Choice</div>
       <div class="q-text" id="qtext"></div>
-      <div class="q-hint hidden" id="qhint"></div>
+      <div id="qhint-wrap" class="q-hint-wrap hidden">
+        <button id="qhint-toggle" class="btn-hint-toggle">💡 Tipp anzeigen</button>
+        <div class="q-hint hidden" id="qhint"></div>
+      </div>
 
       <div class="options hidden" id="options"></div>
 
@@ -1551,7 +1628,7 @@
     <div class="result-title" id="result-title">Geschafft!</div>
     <div class="result-sub" id="result-sub">Hier ist dein Ergebnis</div>
 
-    <div class="score-big"><span id="final-score">0</span><span class="of"> / 20</span></div>
+    <div class="score-big"><span id="final-score">0</span><span class="of"> / <span id="final-total">20</span></span></div>
     <div class="score-percent" id="final-percent">0%</div>
     <div class="grade" id="grade">Note: –</div>
 
@@ -1567,6 +1644,24 @@
     </div>
   </section>
 
+  <!-- =================== LESETEXT =================== -->
+  <section id="reading" class="hidden reading-screen">
+    <div class="reading-top">
+      <span id="reading-mode-label" class="mode-badge"></span>
+      <button id="reading-abort-btn" class="btn-abort" title="Test abbrechen">✕</button>
+    </div>
+    <div id="reading-abort-confirm" class="abort-confirm hidden">
+      <span>Test wirklich abbrechen?</span>
+      <button id="reading-abort-yes" class="btn btn-coral btn-sm">Ja, abbrechen</button>
+      <button id="reading-abort-no" class="btn btn-ghost btn-sm">Weiter üben</button>
+    </div>
+    <h2 id="reading-title" class="reading-title"></h2>
+    <div id="reading-story" class="reading-story"></div>
+    <div style="text-align:center; margin-top: 1rem;">
+      <button id="reading-submit" class="btn btn-forest btn-lg">Auswerten</button>
+    </div>
+  </section>
+
   <footer>made with care · for class 5 ✎</footer>
 
 </div>
@@ -1574,6 +1669,8 @@
 <script src="questions/english/q_simple_present.js"></script>
 <script src="questions/english/q_simple_past.js"></script>
 <script src="questions/english/q_telling_time.js"></script>
+<script src="questions/english/q_reading_present.js"></script>
+<script src="questions/english/q_reading_past.js"></script>
 <script>
   // ============ CONFIG ============
   const TEST_SIZE = 20;
@@ -1610,6 +1707,33 @@
       subject: 'english',
       cookieName: 'mixed_highscore',
       getPool: () => questions.concat(questionsPast).concat(questionsTellingTime)
+    },
+    readingPresent: {
+      label: 'Lesetext – Present',
+      shortLabel: 'Lesen Present',
+      icon: '📖',
+      subject: 'english',
+      cookieName: 'reading_present_hs',
+      type: 'reading',
+      getPool: () => questionsReadingPresent
+    },
+    readingPast: {
+      label: 'Lesetext – Past',
+      shortLabel: 'Lesen Past',
+      icon: '📖',
+      subject: 'english',
+      cookieName: 'reading_past_hs',
+      type: 'reading',
+      getPool: () => questionsReadingPast
+    },
+    readingMixed: {
+      label: 'Lesetext – Mixed',
+      shortLabel: 'Lesen Mixed',
+      icon: '📖',
+      subject: 'english',
+      cookieName: 'reading_mixed_hs',
+      type: 'reading',
+      getPool: () => questionsReadingPresent.concat(questionsReadingPast)
     }
   };
 
@@ -1617,11 +1741,12 @@
   let currentMode = 'present';
   let session = null;
   // session = { mode, questions: [], answers: {idx: {given, isCorrect}}, current, viewing, score }
+  let currentReading = null;
   let returnTo = 'start';
 
   // ============ ELEMENTS ============
   const $ = id => document.getElementById(id);
-  const screens = ['start', 'info', 'quiz', 'result'];
+  const screens = ['start', 'info', 'quiz', 'result', 'reading'];
 
   function show(id) {
     screens.forEach(s => $(s).classList.toggle('hidden', s !== id));
@@ -1763,12 +1888,14 @@
     }
     $('qtext').innerHTML = html;
 
-    // Hint (für non-verb Texteingabe)
+    // Hint (für non-verb Texteingabe) — hinter Toggle versteckt
     if (q.hint && !q.verb) {
       $('qhint').textContent = q.hint;
-      $('qhint').classList.remove('hidden');
-    } else {
       $('qhint').classList.add('hidden');
+      $('qhint-wrap').classList.remove('hidden');
+      $('qhint-toggle').textContent = '💡 Tipp anzeigen';
+    } else {
+      $('qhint-wrap').classList.add('hidden');
     }
 
     // Antwortbereich
@@ -1913,10 +2040,84 @@
   }
 
   // ============ FINISH ============
+  function startQuiz(modeKey) {
+    if (MODES[modeKey].type === 'reading') {
+      startReadingTest(modeKey);
+    } else {
+      startNewTest(modeKey);
+    }
+  }
+
+  function startReadingTest(modeKey) {
+    currentMode = modeKey;
+    const pool = MODES[modeKey].getPool();
+    const story = pool[Math.floor(Math.random() * pool.length)];
+    currentReading = { story, mode: modeKey };
+    $('reading-title').textContent = story.title;
+    $('reading-mode-label').textContent = `${MODES[modeKey].icon} ${MODES[modeKey].label}`;
+    $('reading-abort-confirm').classList.add('hidden');
+    renderReadingStory(story);
+    show('reading');
+  }
+
+  function renderReadingStory(story) {
+    let html = story.story;
+    story.blanks.forEach((blank, i) => {
+      const opts = shuffle([...blank.options])
+        .map(o => `<option value="${escapeHtml(o)}">${escapeHtml(o)}</option>`)
+        .join('');
+      html = html.replace(`[${i}]`, `<select id="blank-${i}" class="story-select"><option value="">–</option>${opts}</select>`);
+    });
+    $('reading-story').innerHTML = html;
+  }
+
+  function finishReading() {
+    const { story, mode } = currentReading;
+    let correct = 0;
+    story.blanks.forEach((blank, i) => {
+      const val = document.getElementById(`blank-${i}`)?.value ?? '';
+      if (val === blank.correct) correct++;
+    });
+    const total = story.blanks.length;
+    const pct = Math.round((correct / total) * 100);
+
+    $('final-score').textContent = correct;
+    $('final-total').textContent = total;
+    $('result-sub').textContent = `${correct} von ${total} Lücken richtig ausgefüllt`;
+    $('final-percent').textContent = pct + '%';
+    $('result-mode').textContent = `${MODES[mode].icon} ${MODES[mode].label}`;
+
+    let emoji, title, grade;
+    if (pct >= 92)      { emoji = '🏆'; title = 'Excellent!';             grade = 'Note: 1 (sehr gut)'; }
+    else if (pct >= 80) { emoji = '🌟'; title = 'Very good!';             grade = 'Note: 2 (gut)'; }
+    else if (pct >= 66) { emoji = '👍'; title = 'Good job!';              grade = 'Note: 3 (befriedigend)'; }
+    else if (pct >= 50) { emoji = '📚'; title = 'Keep going!';            grade = 'Note: 4 (ausreichend)'; }
+    else if (pct >= 30) { emoji = '✍️'; title = 'Üb noch ein bisschen!'; grade = 'Note: 5 (mangelhaft)'; }
+    else                { emoji = '💪'; title = "Don't give up!";         grade = 'Note: 6 (ungenügend)'; }
+    $('result-emoji').textContent = emoji;
+    $('result-title').textContent = title;
+    $('grade').textContent = grade;
+
+    const isNew = maybeUpdateHighscore(mode, correct, total);
+    if (isNew) {
+      $('new-highscore').classList.remove('hidden');
+      $('new-highscore-val').textContent = `${correct} / ${total} (${pct}%)`;
+    } else {
+      $('new-highscore').classList.add('hidden');
+    }
+
+    currentMode = mode;
+    currentReading = null;
+    renderHighscoreOnStart();
+    show('result');
+  }
+
   function finishTest() {
     const pct = Math.round((session.score / TEST_SIZE) * 100);
     const finishedMode = session.mode;
     $('final-score').textContent = session.score;
+    $('final-total').textContent = TEST_SIZE;
+    $('result-sub').textContent = 'Hier ist dein Ergebnis';
     $('final-percent').textContent = pct + '%';
     $('result-mode').textContent = `${MODES[finishedMode].icon} ${MODES[finishedMode].label}`;
 
@@ -1951,12 +2152,35 @@
   document.querySelectorAll('.mode-card').forEach(card => {
     card.addEventListener('click', () => {
       const mode = card.dataset.mode;
-      startNewTest(mode);
+      startQuiz(mode);
     });
   });
 
   // Retry: gleichen Modus nochmal
-  $('retry-btn').addEventListener('click', () => startNewTest(currentMode));
+  $('retry-btn').addEventListener('click', () => startQuiz(currentMode));
+
+  // Hint-Toggle
+  $('qhint-toggle').addEventListener('click', () => {
+    const hint = $('qhint');
+    const btn  = $('qhint-toggle');
+    const isHidden = hint.classList.toggle('hidden');
+    btn.textContent = isHidden ? '💡 Tipp anzeigen' : '💡 Tipp verbergen';
+  });
+
+  // Reading-Screen Events
+  $('reading-submit').addEventListener('click', finishReading);
+  $('reading-abort-btn').addEventListener('click', () => {
+    $('reading-abort-confirm').classList.remove('hidden');
+  });
+  $('reading-abort-yes').addEventListener('click', () => {
+    currentReading = null;
+    $('reading-abort-confirm').classList.add('hidden');
+    renderHighscoreOnStart();
+    show('start');
+  });
+  $('reading-abort-no').addEventListener('click', () => {
+    $('reading-abort-confirm').classList.add('hidden');
+  });
 
   $('goto-info-from-start').addEventListener('click', () => {
     returnTo = 'start';
