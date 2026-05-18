@@ -1,6 +1,6 @@
-// 60 Fragen zur Uhrzeit auf Englisch – 5./6. Klasse
+// 120 Fragen zur Uhrzeit auf Englisch – 5./6. Klasse
 // type: "mc" = Multiple Choice, "text" = Texteingabe
-// hard: true = Extra-Schwer (Fragen 51–60)
+// hard: true = Extra-Schwer (Fragen 51–60 und 111–120)
 
 const questionsTellingTime = [
 
@@ -317,5 +317,313 @@ const questionsTellingTime = [
     options: ["It's five to eight in the morning.", "It's five past seven in the morning.", "It's seven fifty-five pm."],
     correct: "It's five to eight in the morning.",
     explain: "7:55 = 5 Minuten VOR 8 = five to eight. Morgens = in the morning (am).",
+    hard: true },
+
+  // ===== TEIL 6: MC – Minuten (5/10/20/25) past/to (61–75) =====
+
+  { id: 61, type: "mc", q: "It is 4:05. How do you say this?",
+    options: ["It's five past four.", "It's five to four.", "It's four and five."],
+    correct: "It's five past four.",
+    explain: "5 Minuten nach 4 = five past four." },
+
+  { id: 62, type: "mc", q: "It is 8:10. How do you say this?",
+    options: ["It's ten past eight.", "It's ten to eight.", "It's eight and ten."],
+    correct: "It's ten past eight.",
+    explain: "10 Minuten nach 8 = ten past eight." },
+
+  { id: 63, type: "mc", q: "It is 2:20. How do you say this?",
+    options: ["It's twenty past two.", "It's twenty to two.", "It's two twenty past."],
+    correct: "It's twenty past two.",
+    explain: "20 Minuten nach 2 = twenty past two." },
+
+  { id: 64, type: "mc", q: "It is 6:25. How do you say this?",
+    options: ["It's twenty-five past six.", "It's twenty-five to six.", "It's six and twenty-five."],
+    correct: "It's twenty-five past six.",
+    explain: "25 Minuten nach 6 = twenty-five past six." },
+
+  { id: 65, type: "mc", q: "It is 9:35. How do you say this?",
+    options: ["It's twenty-five to ten.", "It's thirty-five past nine.", "It's twenty-five past nine."],
+    correct: "It's twenty-five to ten.",
+    explain: "9:35 = 25 Minuten VOR 10 = twenty-five to ten." },
+
+  { id: 66, type: "mc", q: "It is 11:40. How do you say this?",
+    options: ["It's twenty to twelve.", "It's forty past eleven.", "It's twenty past eleven."],
+    correct: "It's twenty to twelve.",
+    explain: "11:40 = 20 Minuten VOR 12 = twenty to twelve." },
+
+  { id: 67, type: "mc", q: "It is 1:50. How do you say this?",
+    options: ["It's ten to two.", "It's fifty past one.", "It's ten past two."],
+    correct: "It's ten to two.",
+    explain: "1:50 = 10 Minuten VOR 2 = ten to two." },
+
+  { id: 68, type: "mc", q: "It is 5:55. How do you say this?",
+    options: ["It's five to six.", "It's fifty-five past five.", "It's five past six."],
+    correct: "It's five to six.",
+    explain: "5:55 = 5 Minuten VOR 6 = five to six." },
+
+  { id: 69, type: "mc", q: "What does 'twenty past six' mean?",
+    options: ["6:20", "5:40", "6:40"],
+    correct: "6:20",
+    explain: "Twenty past six = 20 Minuten nach 6 = 6:20." },
+
+  { id: 70, type: "mc", q: "What does 'ten to nine' mean?",
+    options: ["8:50", "9:10", "8:10"],
+    correct: "8:50",
+    explain: "Ten to nine = 10 Minuten VOR 9 = 8:50." },
+
+  { id: 71, type: "mc", q: "What does 'twenty-five to four' mean?",
+    options: ["3:35", "4:25", "3:25"],
+    correct: "3:35",
+    explain: "Twenty-five to four = 25 Minuten VOR 4 = 3:35." },
+
+  { id: 72, type: "mc", q: "What does 'five past ten' mean?",
+    options: ["10:05", "9:55", "10:50"],
+    correct: "10:05",
+    explain: "Five past ten = 5 Minuten nach 10 = 10:05." },
+
+  { id: 73, type: "mc", q: "It is 3:10. Which sentence is correct?",
+    options: ["It's ten past three.", "It's three past ten.", "It's ten o'clock three."],
+    correct: "It's ten past three.",
+    explain: "Reihenfolge: Minuten + past/to + Stunde." },
+
+  { id: 74, type: "mc", q: "It is 7:40. Which sentence is correct?",
+    options: ["It's twenty to eight.", "It's twenty past seven.", "It's forty seven."],
+    correct: "It's twenty to eight.",
+    explain: "7:40 = 20 Minuten VOR 8 = twenty to eight." },
+
+  { id: 75, type: "mc", q: "It is 12:05. How do you say this?",
+    options: ["It's five past twelve.", "It's five to twelve.", "It's twelve five."],
+    correct: "It's five past twelve.",
+    explain: "5 Minuten nach 12 = five past twelve." },
+
+  // ===== TEIL 7: MC – Tagesablauf & Schule (76–90) =====
+
+  { id: 76, type: "mc", q: "What time do you usually have breakfast? ___ 7 am.",
+    options: ["At", "In", "On"],
+    correct: "At",
+    explain: "Konkrete Uhrzeit: At 7 am." },
+
+  { id: 77, type: "mc", q: "I go to bed ___ 9 pm ___ school days.",
+    options: ["at / on", "in / at", "on / in"],
+    correct: "at / on",
+    explain: "Uhrzeit → at, Tagesangaben (Tage) → on." },
+
+  { id: 78, type: "mc", q: "The English lesson starts at quarter past nine. What time is it?",
+    options: ["9:15", "9:45", "8:45"],
+    correct: "9:15",
+    explain: "Quarter past nine = 15 Minuten nach 9 = 9:15." },
+
+  { id: 79, type: "mc", q: "The lunch break is from 12:15 to 1:00. How long is the break?",
+    options: ["45 minutes", "1 hour", "30 minutes"],
+    correct: "45 minutes",
+    explain: "Von 12:15 bis 13:00 sind es 45 Minuten." },
+
+  { id: 80, type: "mc", q: "School ends at half past three. What time is it?",
+    options: ["3:30", "2:30", "3:00"],
+    correct: "3:30",
+    explain: "Half past three = 30 Minuten nach 3 = 3:30." },
+
+  { id: 81, type: "mc", q: "My alarm rings ___ 6:45 ___ the morning.",
+    options: ["at / in", "in / at", "on / in"],
+    correct: "at / in",
+    explain: "Uhrzeit → at 6:45, Tagesabschnitt → in the morning." },
+
+  { id: 82, type: "mc", q: "What time does the bus leave? ___ ten to eight.",
+    options: ["At", "In", "On"],
+    correct: "At",
+    explain: "Uhrzeitangabe: At ten to eight (= 7:50)." },
+
+  { id: 83, type: "mc", q: "I usually do my homework ___ the afternoon.",
+    options: ["in", "at", "on"],
+    correct: "in",
+    explain: "Tagesabschnitte: in the morning / afternoon / evening." },
+
+  { id: 84, type: "mc", q: "My piano lesson is ___ Wednesday ___ 5 pm.",
+    options: ["on / at", "in / on", "at / on"],
+    correct: "on / at",
+    explain: "Wochentag → on Wednesday, Uhrzeit → at 5 pm." },
+
+  { id: 85, type: "mc", q: "What time is it when the small hand points to 4 and the big hand to 12?",
+    options: ["4:00 (four o'clock)", "12:04", "4:30"],
+    correct: "4:00 (four o'clock)",
+    explain: "Kleiner Zeiger (Stunde) auf 4, großer Zeiger (Minute) auf 12 = 4:00." },
+
+  { id: 86, type: "mc", q: "When the big hand points to 6, the time is...",
+    options: ["half past (the hour)", "quarter past", "o'clock"],
+    correct: "half past (the hour)",
+    explain: "Der Minutenzeiger auf der 6 zeigt 30 Minuten = half past." },
+
+  { id: 87, type: "mc", q: "When the big hand points to 3, the time is...",
+    options: ["quarter past (the hour)", "quarter to", "half past"],
+    correct: "quarter past (the hour)",
+    explain: "Der Minutenzeiger auf der 3 zeigt 15 Minuten = quarter past." },
+
+  { id: 88, type: "mc", q: "When the big hand points to 9, the time is...",
+    options: ["quarter to (the next hour)", "quarter past", "half past"],
+    correct: "quarter to (the next hour)",
+    explain: "Der Minutenzeiger auf der 9 zeigt 45 Minuten = quarter to (nächste Stunde)." },
+
+  { id: 89, type: "mc", q: "I go to school ___ Monday ___ Friday.",
+    options: ["from / to", "in / at", "at / on"],
+    correct: "from / to",
+    explain: "Zeitraum von... bis...: from Monday to Friday." },
+
+  { id: 90, type: "mc", q: "The shop is open ___ 8 am ___ 6 pm.",
+    options: ["from / to", "at / in", "on / at"],
+    correct: "from / to",
+    explain: "Öffnungszeit als Zeitraum: from 8 am to 6 pm." },
+
+  // ===== TEIL 8: TEXT – mehr Uhrzeiten (91–110) =====
+
+  { id: 91, type: "text", q: "Es ist 4:05 Uhr. Schreibe auf Englisch.",
+    correct: ["it's five past four", "five past four", "it's four oh five", "four oh five"],
+    explain: "4:05 = five past four." },
+
+  { id: 92, type: "text", q: "Es ist 8:20 Uhr. Schreibe auf Englisch.",
+    correct: ["it's twenty past eight", "twenty past eight", "it's eight twenty", "eight twenty"],
+    explain: "8:20 = twenty past eight." },
+
+  { id: 93, type: "text", q: "Es ist 11:40 Uhr. Schreibe auf Englisch.",
+    correct: ["it's twenty to twelve", "twenty to twelve", "it's eleven forty", "eleven forty"],
+    explain: "11:40 = twenty to twelve." },
+
+  { id: 94, type: "text", q: "Es ist 2:25 Uhr. Schreibe auf Englisch.",
+    correct: ["it's twenty-five past two", "twenty-five past two", "twenty five past two", "it's two twenty-five", "two twenty-five", "two twenty five"],
+    explain: "2:25 = twenty-five past two." },
+
+  { id: 95, type: "text", q: "Es ist 6:35 Uhr. Schreibe auf Englisch.",
+    correct: ["it's twenty-five to seven", "twenty-five to seven", "twenty five to seven", "it's six thirty-five", "six thirty-five", "six thirty five"],
+    explain: "6:35 = twenty-five to seven." },
+
+  { id: 96, type: "text", q: "Es ist 10:50 Uhr. Schreibe auf Englisch.",
+    correct: ["it's ten to eleven", "ten to eleven", "it's ten fifty", "ten fifty"],
+    explain: "10:50 = ten to eleven." },
+
+  { id: 97, type: "text", q: "Es ist 9:10 Uhr. Schreibe auf Englisch.",
+    correct: ["it's ten past nine", "ten past nine", "it's nine ten", "nine ten"],
+    explain: "9:10 = ten past nine." },
+
+  { id: 98, type: "text", q: "Wie fragst du auf Englisch nach der Uhrzeit? (kurze Form)",
+    correct: ["what time is it", "what's the time", "what is the time"],
+    explain: "Standardfragen: What time is it? / What's the time?" },
+
+  { id: 99, type: "text", q: "Ergänze: 'School starts ___ 8 o'clock.' (Präposition)",
+    correct: ["at"],
+    explain: "Konkrete Uhrzeit immer mit 'at'." },
+
+  { id: 100, type: "text", q: "Ergänze: 'My birthday is ___ Saturday.' (Präposition)",
+    correct: ["on"],
+    explain: "Wochentage immer mit 'on'." },
+
+  { id: 101, type: "text", q: "Ergänze: 'We have dinner ___ the evening.' (Präposition)",
+    correct: ["in"],
+    explain: "Tagesabschnitte (morning/afternoon/evening) immer mit 'in'." },
+
+  { id: 102, type: "text", q: "Es ist 5:00 Uhr nachmittags. Schreibe mit am/pm.",
+    correct: ["5:00 pm", "5 pm", "it's 5 pm", "five o'clock pm", "five pm"],
+    explain: "Nachmittag = pm: 5:00 pm." },
+
+  { id: 103, type: "text", q: "Es ist 9:00 Uhr morgens. Schreibe mit am/pm.",
+    correct: ["9:00 am", "9 am", "it's 9 am", "nine o'clock am", "nine am"],
+    explain: "Morgens = am: 9:00 am." },
+
+  { id: 104, type: "text", q: "Es ist 1:00 Uhr nachts. Schreibe mit am/pm.",
+    correct: ["1:00 am", "1 am", "it's 1 am", "one o'clock am", "one am"],
+    explain: "Nachts (nach Mitternacht) = am: 1:00 am." },
+
+  { id: 105, type: "text", q: "Es ist 8:00 Uhr. Schreibe auf Englisch (volle Stunde).",
+    correct: ["it's eight o'clock", "eight o'clock"],
+    explain: "Volle Stunde: eight o'clock." },
+
+  { id: 106, type: "text", q: "Es ist 12:30 Uhr mittags. Schreibe auf Englisch.",
+    correct: ["it's half past twelve", "half past twelve", "it's twelve thirty", "twelve thirty"],
+    explain: "12:30 = half past twelve oder twelve thirty." },
+
+  { id: 107, type: "text", q: "Wie sagst du 'Es ist Viertel vor sechs.' auf Englisch?",
+    correct: ["it's quarter to six", "quarter to six", "it's a quarter to six"],
+    explain: "Viertel vor sechs = quarter to six (5:45)." },
+
+  { id: 108, type: "text", q: "Wie sagst du 'Es ist Viertel nach drei.' auf Englisch?",
+    correct: ["it's quarter past three", "quarter past three", "it's a quarter past three"],
+    explain: "Viertel nach drei = quarter past three (3:15)." },
+
+  { id: 109, type: "text", q: "Wie sagst du 'Es ist halb acht.' auf Englisch? (Achtung: andere Logik!)",
+    correct: ["it's half past seven", "half past seven", "it's seven thirty", "seven thirty"],
+    explain: "Deutsch 'halb acht' = 7:30 = half past SEVEN (eine Stunde früher denken!)." },
+
+  { id: 110, type: "text", q: "Wie sagst du 'Es ist halb zehn.' auf Englisch?",
+    correct: ["it's half past nine", "half past nine", "it's nine thirty", "nine thirty"],
+    explain: "Deutsch 'halb zehn' = 9:30 = half past NINE." },
+
+  // ===== TEIL 9: EXTRA SCHWER (111–120) =====
+
+  { id: 111, type: "mc",
+    q: "It is 16:20. How do you say this in spoken English (12-hour format)?",
+    options: ["It's twenty past four in the afternoon.", "It's twenty to four in the afternoon.", "It's four twenty am."],
+    correct: "It's twenty past four in the afternoon.",
+    explain: "16:20 = 4:20 pm = twenty past four in the afternoon.",
+    hard: true },
+
+  { id: 112, type: "mc",
+    q: "A class starts at 8:15 and lasts 45 minutes. When does it end?",
+    options: ["9:00", "8:45", "9:15"],
+    correct: "9:00",
+    explain: "8:15 + 45 Minuten = 9:00.",
+    hard: true },
+
+  { id: 113, type: "mc",
+    q: "A train leaves London at 14:50 and arrives in Manchester at 17:05. How long is the journey?",
+    options: ["2 hours 15 minutes", "3 hours 15 minutes", "2 hours 55 minutes"],
+    correct: "2 hours 15 minutes",
+    explain: "14:50 → 17:05: zuerst bis 17:00 = 2h 10min, plus 5min = 2h 15min.",
+    hard: true },
+
+  { id: 114, type: "mc",
+    q: "It is 11:55 pm. In 10 minutes, what time will it be?",
+    options: ["12:05 am (next day)", "12:05 pm", "00:05 pm"],
+    correct: "12:05 am (next day)",
+    explain: "23:55 + 10 Min = 00:05 = 12:05 am am nächsten Tag.",
+    hard: true },
+
+  { id: 115, type: "mc",
+    q: "In British English, what does 'half eight' usually mean?",
+    options: ["8:30", "7:30", "8:00"],
+    correct: "8:30",
+    explain: "Im britischen Englisch: 'half eight' = half past eight = 8:30 (nicht wie im Deutschen).",
+    hard: true },
+
+  { id: 116, type: "mc",
+    q: "A meeting starts at 9:30 am and ends at 1:15 pm. How long is the meeting?",
+    options: ["3 hours 45 minutes", "4 hours 15 minutes", "3 hours 15 minutes"],
+    correct: "3 hours 45 minutes",
+    explain: "Von 9:30 bis 13:15: 3 Stunden bis 12:30, plus 45 Minuten bis 13:15 = 3h 45min.",
+    hard: true },
+
+  { id: 117, type: "mc",
+    q: "What is the formal/official way to write 11:45 pm?",
+    options: ["23:45", "11:45 pm", "23:45 pm"],
+    correct: "23:45",
+    explain: "Im offiziellen 24-Stunden-Format: 23:45 (ohne am/pm).",
+    hard: true },
+
+  { id: 118, type: "mc",
+    q: "Choose the correct sentence:",
+    options: ["The film starts at 7:30 pm on Friday.", "The film starts on 7:30 pm in Friday.", "The film starts in 7:30 pm at Friday."],
+    correct: "The film starts at 7:30 pm on Friday.",
+    explain: "Uhrzeit → at 7:30 pm, Wochentag → on Friday.",
+    hard: true },
+
+  { id: 119, type: "mc",
+    q: "It is now 7:40 am. School starts in 35 minutes. What time does school start?",
+    options: ["8:15 am", "8:05 am", "8:25 am"],
+    correct: "8:15 am",
+    explain: "7:40 + 35 Min: bis 8:00 = 20 Min, plus 15 Min = 8:15.",
+    hard: true },
+
+  { id: 120, type: "mc",
+    q: "Which sentence is correct for saying 09:00 in spoken British English?",
+    options: ["It's nine o'clock in the morning.", "It's nine in the clock am.", "It's at nine o'clock morning."],
+    correct: "It's nine o'clock in the morning.",
+    explain: "It's nine o'clock in the morning – Standardformulierung.",
     hard: true },
 ];
