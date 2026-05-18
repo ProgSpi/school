@@ -1921,12 +1921,12 @@
     $('result-mode').textContent = `${MODES[finishedMode].icon} ${MODES[finishedMode].label}`;
 
     let emoji, title, grade;
-    if (pct >= 90)      { emoji = '🏆'; title = 'Excellent!';  grade = 'Note: 1 (sehr gut)'; }
-    else if (pct >= 75) { emoji = '🌟'; title = 'Very good!';  grade = 'Note: 2 (gut)'; }
-    else if (pct >= 60) { emoji = '👍'; title = 'Good job!';   grade = 'Note: 3 (befriedigend)'; }
-    else if (pct >= 45) { emoji = '📚'; title = 'Keep going!'; grade = 'Note: 4 (ausreichend)'; }
-    else if (pct >= 25) { emoji = '✍️'; title = 'Üb noch ein bisschen!'; grade = 'Note: 5 (mangelhaft)'; }
-    else                { emoji = '💪'; title = "Don't give up!"; grade = 'Note: 6 (ungenügend)'; }
+    if (pct >= 92)      { emoji = '🏆'; title = 'Excellent!';             grade = 'Note: 1 (sehr gut)'; }
+    else if (pct >= 80) { emoji = '🌟'; title = 'Very good!';             grade = 'Note: 2 (gut)'; }
+    else if (pct >= 66) { emoji = '👍'; title = 'Good job!';              grade = 'Note: 3 (befriedigend)'; }
+    else if (pct >= 50) { emoji = '📚'; title = 'Keep going!';            grade = 'Note: 4 (ausreichend)'; }
+    else if (pct >= 30) { emoji = '✍️'; title = 'Üb noch ein bisschen!'; grade = 'Note: 5 (mangelhaft)'; }
+    else                { emoji = '💪'; title = "Don't give up!";         grade = 'Note: 6 (ungenügend)'; }
     $('result-emoji').textContent = emoji;
     $('result-title').textContent = title;
     $('grade').textContent = grade;
