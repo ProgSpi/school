@@ -1,0 +1,62 @@
+# Architekturentscheidungen
+
+## ADR-001: Vanilla JS statt Framework
+**Datum:** 2026-05
+**Status:** Akzeptiert
+
+**Kontext:** Die App soll einfach auf einem einfachen PHP-Webserver laufen, ohne Build-Schritt.
+
+**Entscheidung:** Kein React/Vue/Svelte. Vanilla JS mit DOM-Manipulation.
+
+**Konsequenz:** Kein npm, kein Bundler. Neue Entwickler brauchen keine Toolchain-Kenntnisse.
+Dafür kein Hot-Reload, manuelle DOM-Updates.
+
+---
+
+## ADR-002: Fragen als JS-Dateien statt JSON/DB
+**Datum:** 2026-05
+**Status:** Akzeptiert
+
+**Kontext:** Fragen müssen leicht editierbar sein, auch ohne DB-Kenntnisse.
+
+**Entscheidung:** Fragen als `const questions = [...]` in `questions/*.js`.
+
+**Konsequenz:** Kein API-Call nötig. Neue Fragen: neue `.js`-Datei + `<script>`-Tag.
+Nachteil: Alle Fragen landen im Browser-Cache. Kein serverseitiges Filtern.
+
+---
+
+## ADR-003: PHP als Backend-Sprache
+**Datum:** 2026-05
+**Status:** Akzeptiert
+
+**Kontext:** Einfaches Hosting, typisches Schul-/Shared-Hosting.
+
+**Entscheidung:** PHP 8.1+ als Backend. Kein Node/Python-Server nötig.
+
+**Konsequenz:** Breite Hosting-Kompatibilität. PHP für API-Endpunkte, HTML-Rendering optional.
+
+---
+
+## ADR-004: Fortschritt im localStorage
+**Datum:** 2026-05
+**Status:** Akzeptiert (bis PHP-Backend steht)
+
+**Kontext:** Kein Login-System, keine DB zum Start.
+
+**Entscheidung:** Highscores und Session-Daten in `localStorage` + Cookie als Fallback.
+
+**Konsequenz:** Daten sind gerätespezifisch. Kein Account-System nötig. Umstieg auf PHP-API geplant.
+
+---
+
+## ADR-005: Inline CSS/JS in index.html
+**Datum:** 2026-05
+**Status:** Akzeptiert (temporär)
+
+**Kontext:** Ein-Datei-Deployment für maximale Einfachheit.
+
+**Entscheidung:** CSS und App-JS bleiben inline im `<style>` und `<script>` Block.
+
+**Konsequenz:** Einfachstes Deployment (eine Datei = die App). Nachteil: große HTML-Datei.
+Refaktor in externe Dateien sobald PHP-Backend integriert wird.

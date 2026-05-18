@@ -1,0 +1,14 @@
+Options -Indexes
+
+# PHP als Einstiegspunkt nutzen
+DirectoryIndex index.php index.html
+
+# API-Routen direkt weiterleiten
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/(.+)$ api/$1.php [L,QSA]
+
+# Sicherheit: .agents/ und config/ niemals direkt ausliefern
+RewriteRule ^\.agents/ - [F,L]
+RewriteRule ^config/ - [F,L]
