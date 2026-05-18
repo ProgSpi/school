@@ -189,77 +189,77 @@ const questionsTellingTime = [
 
   { id: 36, type: "text", q: "Es ist 7:30 Uhr. Schreibe die Uhrzeit auf Englisch.",
     hint: "Langform (z. B. half past three)",
-    correct: ["it's half past seven", "half past seven"],
+    correct: ["half past seven"],
     explain: "7:30 in der Langform: half past seven." },
 
   { id: 37, type: "text", q: "Es ist 9:15 Uhr. Schreibe die Uhrzeit auf Englisch.",
     hint: "Langform (z. B. quarter past three)",
-    correct: ["it's quarter past nine", "quarter past nine", "it's a quarter past nine", "a quarter past nine"],
+    correct: ["quarter past nine", "a quarter past nine"],
     explain: "9:15 in der Langform: quarter past nine." },
 
   { id: 38, type: "text", q: "Es ist 3:45 Uhr. Schreibe die Uhrzeit auf Englisch.",
     hint: "Langform (z. B. quarter to ten)",
-    correct: ["it's quarter to four", "quarter to four", "it's a quarter to four", "a quarter to four"],
+    correct: ["quarter to four", "a quarter to four"],
     explain: "3:45 in der Langform: quarter to four." },
 
   { id: 39, type: "text", q: "Es ist 6:00 Uhr. Schreibe die Uhrzeit auf Englisch.",
     hint: "Volle Stunde (z. B. three o'clock)",
-    correct: ["it's six o'clock", "six o'clock"],
+    correct: ["six o'clock"],
     explain: "Volle Stunden: six o'clock." },
 
   { id: 40, type: "text", q: "Es ist 2:30 Uhr nachmittags. Schreibe die Uhrzeit mit am/pm.",
     hint: "Kurzform mit pm (z. B. 4:15 pm)",
-    correct: ["2:30 pm", "it's 2:30 pm"],
+    correct: ["2:30 pm"],
     explain: "Nachmittags = pm. Digital geschrieben: 2:30 pm." },
 
   { id: 41, type: "text", q: "Es ist 10:45 Uhr. Schreibe die Uhrzeit auf Englisch.",
     hint: "Kurzform (z. B. ten thirty)",
-    correct: ["it's ten forty-five", "ten forty-five", "it's ten forty five", "ten forty five"],
+    correct: ["ten forty-five", "ten forty five"],
     explain: "10:45 in der Kurzform: ten forty-five." },
 
   { id: 42, type: "text", q: "Es ist 8:00 Uhr morgens. Schreibe die Uhrzeit mit am/pm.",
     hint: "Kurzform mit am (z. B. 7:30 am)",
-    correct: ["8:00 am", "8 am", "it's 8:00 am", "it's 8 am"],
+    correct: ["8:00 am", "8 am"],
     explain: "Morgens = am. Digital geschrieben: 8:00 am." },
 
   { id: 43, type: "text", q: "Es ist 11:30 Uhr. Schreibe die Uhrzeit auf Englisch.",
     hint: "Kurzform (z. B. seven thirty)",
-    correct: ["it's eleven thirty", "eleven thirty"],
+    correct: ["eleven thirty"],
     explain: "11:30 in der Kurzform: eleven thirty." },
 
   { id: 44, type: "text", q: "Es ist 5:15 Uhr. Schreibe die Uhrzeit auf Englisch.",
     hint: "Langform (z. B. quarter past three)",
-    correct: ["it's quarter past five", "quarter past five", "it's a quarter past five", "a quarter past five"],
+    correct: ["quarter past five", "a quarter past five"],
     explain: "5:15 in der Langform: quarter past five." },
 
   { id: 45, type: "text", q: "Es ist 12:00 Uhr mittags. Schreibe die Uhrzeit auf Englisch.",
     hint: "Begriff für Mittag (noon / midday / twelve o'clock)",
-    correct: ["it's noon", "noon", "it's twelve o'clock", "twelve o'clock", "it's midday", "midday"],
+    correct: ["noon", "twelve o'clock", "midday"],
     explain: "Mittag = noon = midday = twelve o'clock." },
 
   { id: 46, type: "text", q: "Es ist 4:30 Uhr. Schreibe die Uhrzeit auf Englisch.",
     hint: "Langform (z. B. half past three)",
-    correct: ["it's half past four", "half past four"],
+    correct: ["half past four"],
     explain: "4:30 in der Langform: half past four." },
 
   { id: 47, type: "text", q: "Es ist 1:15 Uhr nachmittags. Schreibe auf Englisch mit am/pm.",
     hint: "Kurzform mit pm (z. B. 4:30 pm)",
-    correct: ["1:15 pm", "it's 1:15 pm"],
+    correct: ["1:15 pm"],
     explain: "Nachmittags = pm. Digital geschrieben: 1:15 pm." },
 
   { id: 48, type: "text", q: "Es ist 7:45 Uhr. Schreibe die Uhrzeit auf Englisch.",
     hint: "Langform (z. B. quarter to four)",
-    correct: ["it's quarter to eight", "quarter to eight", "it's a quarter to eight", "a quarter to eight"],
+    correct: ["quarter to eight", "a quarter to eight"],
     explain: "7:45 in der Langform: quarter to eight." },
 
   { id: 49, type: "text", q: "Es ist 0:00 Uhr (Mitternacht). Schreibe auf Englisch.",
     hint: "Begriff für Mitternacht (midnight / 12:00 am)",
-    correct: ["it's midnight", "midnight", "12:00 am", "it's 12:00 am"],
+    correct: ["midnight", "12:00 am"],
     explain: "Mitternacht = midnight = 12:00 am." },
 
   { id: 50, type: "text", q: "Es ist 3:00 Uhr nachmittags. Schreibe mit am/pm.",
     hint: "Kurzform mit pm (z. B. 4:30 pm)",
-    correct: ["3:00 pm", "3 pm", "it's 3:00 pm", "it's 3 pm"],
+    correct: ["3:00 pm", "3 pm"],
     explain: "Nachmittags = pm. Digital geschrieben: 3:00 pm." },
 
   // ===== TEIL 5: EXTRA SCHWER (51–60) =====
@@ -492,37 +492,37 @@ const questionsTellingTime = [
 
   { id: 91, type: "text", q: "Es ist 4:05 Uhr. Schreibe auf Englisch.",
     hint: "Langform (z. B. ten past two)",
-    correct: ["it's five past four", "five past four"],
+    correct: ["five past four"],
     explain: "4:05 in der Langform: five past four." },
 
   { id: 92, type: "text", q: "Es ist 8:20 Uhr. Schreibe auf Englisch.",
     hint: "Langform (z. B. ten past four)",
-    correct: ["it's twenty past eight", "twenty past eight"],
+    correct: ["twenty past eight"],
     explain: "8:20 in der Langform: twenty past eight." },
 
   { id: 93, type: "text", q: "Es ist 11:40 Uhr. Schreibe auf Englisch.",
     hint: "Langform (z. B. twenty to seven)",
-    correct: ["it's twenty to twelve", "twenty to twelve"],
+    correct: ["twenty to twelve"],
     explain: "11:40 in der Langform: twenty to twelve." },
 
   { id: 94, type: "text", q: "Es ist 2:25 Uhr. Schreibe auf Englisch.",
     hint: "Kurzform (z. B. seven thirty)",
-    correct: ["it's two twenty-five", "two twenty-five", "it's two twenty five", "two twenty five"],
+    correct: ["two twenty-five", "two twenty five"],
     explain: "2:25 in der Kurzform: two twenty-five." },
 
   { id: 95, type: "text", q: "Es ist 6:35 Uhr. Schreibe auf Englisch.",
     hint: "Langform (z. B. ten to five)",
-    correct: ["it's twenty-five to seven", "twenty-five to seven", "it's twenty five to seven", "twenty five to seven"],
+    correct: ["twenty-five to seven", "twenty five to seven"],
     explain: "6:35 in der Langform: twenty-five to seven." },
 
   { id: 96, type: "text", q: "Es ist 10:50 Uhr. Schreibe auf Englisch.",
     hint: "Kurzform (z. B. four fifteen)",
-    correct: ["it's ten fifty", "ten fifty"],
+    correct: ["ten fifty"],
     explain: "10:50 in der Kurzform: ten fifty." },
 
   { id: 97, type: "text", q: "Es ist 9:10 Uhr. Schreibe auf Englisch.",
     hint: "Langform (z. B. ten past two)",
-    correct: ["it's ten past nine", "ten past nine"],
+    correct: ["ten past nine"],
     explain: "9:10 in der Langform: ten past nine." },
 
   { id: 98, type: "text", q: "Wie fragst du auf Englisch nach der Uhrzeit?",
@@ -547,47 +547,47 @@ const questionsTellingTime = [
 
   { id: 102, type: "text", q: "Es ist 5:00 Uhr nachmittags. Schreibe mit am/pm.",
     hint: "Kurzform mit pm (z. B. 4:30 pm)",
-    correct: ["5:00 pm", "5 pm", "it's 5 pm", "it's 5:00 pm"],
+    correct: ["5:00 pm", "5 pm"],
     explain: "Nachmittag = pm. Digital geschrieben: 5:00 pm." },
 
   { id: 103, type: "text", q: "Es ist 9:00 Uhr morgens. Schreibe mit am/pm.",
     hint: "Kurzform mit am (z. B. 7:30 am)",
-    correct: ["9:00 am", "9 am", "it's 9 am", "it's 9:00 am"],
+    correct: ["9:00 am", "9 am"],
     explain: "Morgens = am. Digital geschrieben: 9:00 am." },
 
   { id: 104, type: "text", q: "Es ist 1:00 Uhr nachts. Schreibe mit am/pm.",
     hint: "Kurzform mit am (z. B. 7:30 am)",
-    correct: ["1:00 am", "1 am", "it's 1 am", "it's 1:00 am"],
+    correct: ["1:00 am", "1 am"],
     explain: "Nachts (nach Mitternacht) = am. Digital geschrieben: 1:00 am." },
 
   { id: 105, type: "text", q: "Es ist 8:00 Uhr. Schreibe auf Englisch.",
     hint: "Volle Stunde (z. B. three o'clock)",
-    correct: ["it's eight o'clock", "eight o'clock"],
+    correct: ["eight o'clock"],
     explain: "Volle Stunde: eight o'clock." },
 
   { id: 106, type: "text", q: "Es ist 12:30 Uhr mittags. Schreibe auf Englisch.",
     hint: "Langform (z. B. half past three)",
-    correct: ["it's half past twelve", "half past twelve"],
+    correct: ["half past twelve"],
     explain: "12:30 in der Langform: half past twelve." },
 
   { id: 107, type: "text", q: "Wie sagst du 'Es ist Viertel vor sechs.' auf Englisch?",
     hint: "Langform (z. B. quarter to four)",
-    correct: ["it's quarter to six", "quarter to six", "it's a quarter to six", "a quarter to six"],
+    correct: ["quarter to six", "a quarter to six"],
     explain: "Viertel vor sechs = quarter to six (5:45)." },
 
   { id: 108, type: "text", q: "Wie sagst du 'Es ist Viertel nach drei.' auf Englisch?",
     hint: "Langform (z. B. quarter past four)",
-    correct: ["it's quarter past three", "quarter past three", "it's a quarter past three", "a quarter past three"],
+    correct: ["quarter past three", "a quarter past three"],
     explain: "Viertel nach drei = quarter past three (3:15)." },
 
   { id: 109, type: "text", q: "Wie sagst du 'Es ist halb acht.' auf Englisch? (Achtung: andere Logik!)",
     hint: "Langform (z. B. half past three) – eine Stunde früher denken!",
-    correct: ["it's half past seven", "half past seven"],
+    correct: ["half past seven"],
     explain: "Deutsch 'halb acht' = 7:30 = half past SEVEN (eine Stunde früher denken!)." },
 
   { id: 110, type: "text", q: "Wie sagst du 'Es ist halb zehn.' auf Englisch?",
     hint: "Langform (z. B. half past three) – eine Stunde früher denken!",
-    correct: ["it's half past nine", "half past nine"],
+    correct: ["half past nine"],
     explain: "Deutsch 'halb zehn' = 9:30 = half past NINE." },
 
   // ===== TEIL 9: EXTRA SCHWER (111–120) =====
