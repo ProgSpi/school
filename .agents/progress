@@ -1,8 +1,8 @@
 # Implementierungsfortschritt
 
-## Status: Grundgerüst bereit
+## Status: Refactoring abgeschlossen
 
-### Abgeschlossen
+### Abgeschlossen (Runde 1)
 - [x] Frontend-App (index.html) – vollständig funktionsfähig
   - Quiz-Modi: Normal, Schwer, Fehler-Wiederholung
   - Themen: Simple Present, Simple Past, Gemischt
@@ -11,9 +11,9 @@
   - Info-Screen mit Grammatik-Erklärungen
   - Responsive Design (Mobile + Desktop)
 - [x] Fragen-Datensätze
-  - `questions/q_eng_simple_present.js` – 100 Fragen
-  - `questions/q_eng_simple_past.js` – 120 Fragen (inkl. 20 Extra-Schwer)
-- [x] VipeCoding-Umgebung eingerichtet
+  - `questions/english/q_simple_present.js` – 100 Fragen
+  - `questions/english/q_simple_past.js` – 120 Fragen (inkl. 20 Extra-Schwer)
+- [x] Umgebung eingerichtet
   - `.agents/` mit allen Wissensdateien
   - `AGENTS` Root-Datei
   - `.claudeignore`
@@ -37,11 +37,25 @@
   - Dynamische `/ total`-Anzeige im Ergebnis-Screen
 - [x] `startQuiz()` als einheitlicher Einstiegspunkt (leitet zu startNewTest oder startReadingTest)
 
-### In Arbeit
-- [ ] PHP-Backend
-  - `index.php` – PHP-Einstiegspunkt
-  - `api/progress.php` – Fortschritts-API
-  - `config/config.php` – Datenbank/App-Konfiguration
+### Abgeschlossen (Runde 4 – Refactoring)
+- [x] Monolithische `index.html` (2287 Zeilen) aufgeteilt in:
+  - `assets/css/app.css` – gesamtes Stylesheet
+  - `assets/js/config.js` – MODES, Konstanten
+  - `assets/js/utils.js` – Hilfsfunktionen ($, show, shuffle, ...)
+  - `assets/js/state.js` – globale Zustandsvariablen
+  - `assets/js/cookies.js` – Cookie/Highscore-Logik
+  - `assets/js/quiz.js` – Quiz-Kernlogik
+  - `assets/js/reading.js` – Lesetext-Logik
+  - `assets/js/events.js` – Event-Listener + Init
+  - `views/header.php` – Header-Partial
+  - `views/screen-start.php` – Start-Screen
+  - `views/screen-info.php` – Info-Screen (3 Tabs)
+  - `views/screen-quiz.php` – Quiz-Screen
+  - `views/screen-result.php` – Ergebnis-Screen
+  - `views/screen-reading.php` – Lesetext-Screen
+  - `views/footer.php` – Footer-Partial
+- [x] `index.php` baut die Seite via PHP `include` zusammen (kein `readfile` mehr)
+- [x] `index.html` = Meta-Refresh-Weiterleitung zu `index.php`
 
 ### Geplant
 - [ ] Datenbank-Schema für Fortschritt (SQLite für einfaches Hosting)
@@ -52,8 +66,11 @@
 - [ ] Lehrer-Dashboard (Klassen-Überblick)
 
 ## Fragen-Statistik
-| Datei                     | Thema          | Anzahl | Hard |
-|---------------------------|----------------|--------|------|
-| q_eng_simple_present.js   | Simple Present | 100    | –    |
-| q_eng_simple_past.js      | Simple Past    | 120    | 20   |
-| **Gesamt**                |                | **220**| **20**|
+| Datei                          | Thema          | Anzahl | Hard |
+|--------------------------------|----------------|--------|------|
+| q_simple_present.js            | Simple Present | 100    | –    |
+| q_simple_past.js               | Simple Past    | 120    | 20   |
+| q_telling_time.js              | Telling Time   | 120    | 20   |
+| q_reading_present.js           | Lesen Present  | 4 Texte × 20 Blanks | – |
+| q_reading_past.js              | Lesen Past     | 4 Texte × 20 Blanks | – |
+| **Gesamt Quiz-Fragen**         |                | **340**| **40**|

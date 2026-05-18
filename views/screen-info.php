@@ -1,0 +1,489 @@
+<section id="info" class="hidden info-screen">
+  <div class="info-header">
+    <h1>English Grammar</h1>
+    <div class="sub">– Alles, was du wissen musst –</div>
+  </div>
+
+  <div class="info-tabs">
+    <button class="info-tab active" data-tab="present">📘 Simple Present</button>
+    <button class="info-tab" data-tab="past">📙 Simple Past</button>
+    <button class="info-tab" data-tab="time">🕐 Telling Time</button>
+  </div>
+
+  <!-- ============ SIMPLE PRESENT ============ -->
+  <div class="info-content" id="info-present">
+
+    <article class="info-block">
+      <h2><span class="num">1</span> Wann benutzt du Simple Present?</h2>
+      <p>Das Simple Present (einfache Gegenwart) brauchst du, wenn etwas:</p>
+      <ul>
+        <li><strong>regelmäßig passiert</strong> – Gewohnheiten und Routinen
+          <div class="ex"><em>I go to school every day.</em><span class="ger">→ Ich gehe jeden Tag zur Schule.</span></div></li>
+        <li><strong>immer wahr ist</strong> – allgemeine Tatsachen
+          <div class="ex"><em>The sun rises in the east.</em><span class="ger">→ Die Sonne geht im Osten auf.</span></div></li>
+        <li><strong>nach einem festen Plan passiert</strong> (Fahrpläne, Stundenpläne)
+          <div class="ex"><em>The train leaves at 8 o'clock.</em><span class="ger">→ Der Zug fährt um 8 Uhr ab.</span></div></li>
+        <li><strong>mit Häufigkeitsadverbien</strong> wie always, often, never beschrieben wird
+          <div class="ex"><em>She often plays tennis.</em><span class="ger">→ Sie spielt oft Tennis.</span></div></li>
+      </ul>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">2</span> Bejahende Sätze (Aussagesätze)</h2>
+      <p><strong>I / you / we / they</strong> + Verb in der Grundform:</p>
+      <div class="ex"><em>I play tennis.</em> <span class="sep">·</span> <em>You play tennis.</em> <span class="sep">·</span> <em>We live in Munich.</em></div>
+      <p><strong>he / she / it</strong> + Verb mit <span class="hi">-s</span> am Ende:</p>
+      <div class="ex"><em>He play<strong>s</strong> tennis.</em> <span class="sep">·</span> <em>She live<strong>s</strong> in Munich.</em></div>
+      <p style="margin-top:10px"><strong>Merke:</strong> Das <span class="hi">-s</span> kommt NUR bei he, she, it dran. Bei allen anderen bleibt das Verb in der Grundform.</p>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">3</span> Schreibregeln für das -s bei he/she/it</h2>
+      <p>Beim Anhängen des -s gibt es ein paar Regeln zu beachten:</p>
+      <table class="rule-table">
+        <thead>
+          <tr><th>Regel</th><th>Beispiele</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Normalfall: einfach +s</td><td>play → play<strong>s</strong>, read → read<strong>s</strong>, eat → eat<strong>s</strong></td></tr>
+          <tr><td>Endet auf <strong>-s, -ss, -sh, -ch, -x, -z</strong>: +es</td><td>wash → wash<strong>es</strong>, watch → watch<strong>es</strong>, kiss → kiss<strong>es</strong>, fix → fix<strong>es</strong></td></tr>
+          <tr><td>Konsonant + y → y wird zu <strong>ies</strong></td><td>study → stud<strong>ies</strong>, fly → fl<strong>ies</strong>, try → tr<strong>ies</strong></td></tr>
+          <tr><td>Vokal + y → nur +s</td><td>play → play<strong>s</strong>, buy → buy<strong>s</strong>, say → say<strong>s</strong></td></tr>
+          <tr><td>Unregelmäßig</td><td>go → <strong>goes</strong>, do → <strong>does</strong>, have → <strong>has</strong></td></tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">4</span> Verneinte Sätze</h2>
+      <p>Du verneinst mit den Hilfsverben <strong>don't</strong> oder <strong>doesn't</strong>:</p>
+      <ul>
+        <li><strong>I / you / we / they</strong> + <span class="hi">don't</span> + Verb (Grundform):
+          <div class="ex"><em>I don't play tennis.</em> <span class="sep">·</span> <em>They don't live here.</em></div></li>
+        <li><strong>he / she / it</strong> + <span class="hi">doesn't</span> + Verb (Grundform!):
+          <div class="ex"><em>He doesn't play tennis.</em> <span class="sep">·</span> <em>She doesn't live here.</em></div></li>
+      </ul>
+      <p><strong>⚠️ Ganz wichtig:</strong> Nach <em>doesn't</em> kommt das Verb OHNE -s. Das -s steckt schon in <em>doesn't</em>!</p>
+      <div class="mistake">
+        <div class="icon">❌</div><div class="wrong">He doesn't plays football.</div>
+        <div class="icon">✅</div><div class="right">He doesn't play football.</div>
+      </div>
+      <p style="margin-top:10px;font-size:0.92rem;color:var(--ink-soft)">Lange Formen: don't = do not · doesn't = does not</p>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">5</span> Fragen bilden</h2>
+      <p>Du beginnst Fragen mit <strong>Do</strong> oder <strong>Does</strong>:</p>
+      <p><span class="hi">Do/Does</span> + Subjekt + Verb (Grundform)?</p>
+      <ul>
+        <li><strong>Do</strong> bei I / you / we / they:
+          <div class="ex"><em>Do you like pizza?</em> <span class="sep">·</span> <em>Do they play tennis?</em></div></li>
+        <li><strong>Does</strong> bei he / she / it:
+          <div class="ex"><em>Does she speak French?</em> <span class="sep">·</span> <em>Does it rain often?</em></div></li>
+      </ul>
+      <p><strong>W-Fragen:</strong> Das Fragewort kommt vor das Hilfsverb:</p>
+      <div class="ex"><em>Where do you live?</em> <span class="sep">·</span> <em>When does the lesson start?</em></div>
+      <div class="mistake">
+        <div class="icon">❌</div><div class="wrong">Where lives she?</div>
+        <div class="icon">✅</div><div class="right">Where does she live?</div>
+      </div>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">6</span> Kurzantworten</h2>
+      <p>Auf Fragen mit <em>do/does</em> antwortet man kurz mit <em>do/does</em> – nicht mit dem Vollverb:</p>
+      <div class="ex"><em>"Do you like pizza?"</em> – <em>"Yes, I do."</em> <span class="sep">/</span> <em>"No, I don't."</em></div>
+      <div class="ex"><em>"Does she play tennis?"</em> – <em>"Yes, she does."</em> <span class="sep">/</span> <em>"No, she doesn't."</em></div>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">7</span> to be – am / is / are</h2>
+      <p>Das Verb <em>to be</em> (sein) ist unregelmäßig und besonders wichtig:</p>
+      <table class="rule-table">
+        <thead><tr><th>Subjekt</th><th>Form</th></tr></thead>
+        <tbody>
+          <tr><td>I</td><td>am</td></tr>
+          <tr><td>he / she / it</td><td>is</td></tr>
+          <tr><td>you / we / they</td><td>are</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:10px"><strong>Beispiele:</strong></p>
+      <div class="ex"><em>I am a student.</em> <span class="sep">·</span> <em>She is from England.</em> <span class="sep">·</span> <em>We are happy.</em></div>
+      <p><strong>Verneinung:</strong> <em>I am not · He isn't · They aren't</em></p>
+      <p><strong>Frage:</strong> <em>Am I…? · Is she…? · Are you…?</em></p>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">8</span> have / has</h2>
+      <p>Auch <em>have</em> (haben) ist unregelmäßig:</p>
+      <ul>
+        <li><strong>I / you / we / they</strong> → <span class="hi">have</span>
+          <div class="ex"><em>I have a dog.</em> <span class="sep">·</span> <em>They have two cats.</em></div></li>
+        <li><strong>he / she / it</strong> → <span class="hi">has</span>
+          <div class="ex"><em>She has a dog.</em> <span class="sep">·</span> <em>It has four legs.</em></div></li>
+      </ul>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">9</span> Signalwörter</h2>
+      <p>An diesen Wörtern erkennst du das Simple Present:</p>
+      <ul>
+        <li><strong>Häufigkeit:</strong> always (immer), usually (normalerweise), often (oft), sometimes (manchmal), never (nie)</li>
+        <li><strong>Zeit:</strong> every day, every week, every Monday, on Mondays, in the morning, at night</li>
+      </ul>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">10</span> Stellung der Häufigkeitsadverbien</h2>
+      <p>Wo stehen Wörter wie <em>always, often, never</em> im Satz?</p>
+      <ul>
+        <li><strong>VOR</strong> dem Vollverb (bei normalen Verben):
+          <div class="ex"><em>She <strong>always</strong> plays football.</em> <span class="sep">·</span> <em>We <strong>never</strong> eat fish.</em></div></li>
+        <li><strong>NACH</strong> dem Verb <em>to be</em> (am/is/are):
+          <div class="ex"><em>She is <strong>always</strong> happy.</em> <span class="sep">·</span> <em>They are <strong>often</strong> late.</em></div></li>
+      </ul>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">11</span> Häufige Fehler – Pass auf!</h2>
+      <div class="mistake">
+        <div class="icon">❌</div><div class="wrong">He don't like fish.</div>
+        <div class="icon">✅</div><div class="right">He doesn't like fish.</div>
+        <div class="icon">❌</div><div class="wrong">Does she likes music?</div>
+        <div class="icon">✅</div><div class="right">Does she like music?</div>
+        <div class="icon">❌</div><div class="wrong">He goes never to school.</div>
+        <div class="icon">✅</div><div class="right">He never goes to school.</div>
+        <div class="icon">❌</div><div class="wrong">Everybody are happy.</div>
+        <div class="icon">✅</div><div class="right">Everybody is happy.</div>
+        <div class="icon">❌</div><div class="wrong">I don't know nothing.</div>
+        <div class="icon">✅</div><div class="right">I don't know anything.</div>
+        <div class="icon">❌</div><div class="wrong">She studys English.</div>
+        <div class="icon">✅</div><div class="right">She studies English.</div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ============ SIMPLE PAST ============ -->
+  <div class="info-content hidden" id="info-past">
+
+    <article class="info-block">
+      <h2><span class="num">1</span> Wann benutzt du Simple Past?</h2>
+      <p>Das Simple Past (einfache Vergangenheit) brauchst du für Handlungen, die:</p>
+      <ul>
+        <li><strong>in der Vergangenheit abgeschlossen</strong> sind – einmalig oder wiederholt
+          <div class="ex"><em>I watched a film yesterday.</em><span class="ger">→ Ich habe gestern einen Film geschaut.</span></div></li>
+        <li><strong>nacheinander passiert sind</strong> (z. B. in Geschichten)
+          <div class="ex"><em>She came in, sat down and opened the book.</em><span class="ger">→ Sie kam herein, setzte sich und öffnete das Buch.</span></div></li>
+        <li><strong>zu einem bestimmten Zeitpunkt</strong> in der Vergangenheit stattfanden
+          <div class="ex"><em>We met in 2019.</em><span class="ger">→ Wir trafen uns 2019.</span></div></li>
+      </ul>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">2</span> Bejahende Sätze (Aussagesätze)</h2>
+      <p>Im Simple Past ist die Form für <strong>alle Personen gleich</strong> – kein -s mehr bei he/she/it!</p>
+      <div class="ex"><em>I played tennis.</em> <span class="sep">·</span> <em>He played tennis.</em> <span class="sep">·</span> <em>They played tennis.</em></div>
+      <p style="margin-top:10px">Es gibt zwei Sorten von Verben:</p>
+      <ul>
+        <li><strong>Regelmäßige Verben</strong>: Verb + <span class="hi">-ed</span>
+          <div class="ex"><em>work → worked</em> <span class="sep">·</span> <em>play → played</em> <span class="sep">·</span> <em>watch → watched</em></div></li>
+        <li><strong>Unregelmäßige Verben</strong>: eigene Past-Form – muss man lernen!
+          <div class="ex"><em>go → went</em> <span class="sep">·</span> <em>see → saw</em> <span class="sep">·</span> <em>buy → bought</em></div></li>
+      </ul>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">3</span> Schreibregeln für das -ed</h2>
+      <p>Beim Anhängen von -ed bei regelmäßigen Verben gibt es ein paar Regeln:</p>
+      <table class="rule-table">
+        <thead>
+          <tr><th>Regel</th><th>Verb</th><th>Past-Form</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Verb endet auf <span class="hi">-e</span> → nur <span class="hi">-d</span></td><td>live, dance, close</td><td>liv<strong>ed</strong>, danc<strong>ed</strong>, clos<strong>ed</strong></td></tr>
+          <tr><td>Konsonant + <span class="hi">y</span> → y wird zu <span class="hi">ied</span></td><td>study, cry, hurry</td><td>stud<strong>ied</strong>, cr<strong>ied</strong>, hurr<strong>ied</strong></td></tr>
+          <tr><td>Vokal + <span class="hi">y</span> → einfach <span class="hi">-ed</span></td><td>play, stay, enjoy</td><td>play<strong>ed</strong>, stay<strong>ed</strong>, enjoy<strong>ed</strong></td></tr>
+          <tr><td>kurzer Vokal + Konsonant → Konsonant <span class="hi">verdoppeln</span></td><td>stop, plan, hop</td><td>sto<strong>pped</strong>, pla<strong>nned</strong>, ho<strong>pped</strong></td></tr>
+          <tr><td>alle anderen → einfach <span class="hi">-ed</span></td><td>work, watch, learn</td><td>work<strong>ed</strong>, watch<strong>ed</strong>, learn<strong>ed</strong></td></tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">4</span> Wichtige unregelmäßige Verben</h2>
+      <p>Diese Verben musst du auswendig lernen – sie folgen keiner Regel:</p>
+      <table class="rule-table">
+        <thead>
+          <tr><th>Grundform</th><th>Simple Past</th><th>Bedeutung</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>be</td><td><strong>was / were</strong></td><td>sein</td></tr>
+          <tr><td>have</td><td><strong>had</strong></td><td>haben</td></tr>
+          <tr><td>do</td><td><strong>did</strong></td><td>tun, machen</td></tr>
+          <tr><td>go</td><td><strong>went</strong></td><td>gehen</td></tr>
+          <tr><td>come</td><td><strong>came</strong></td><td>kommen</td></tr>
+          <tr><td>see</td><td><strong>saw</strong></td><td>sehen</td></tr>
+          <tr><td>get</td><td><strong>got</strong></td><td>bekommen</td></tr>
+          <tr><td>give</td><td><strong>gave</strong></td><td>geben</td></tr>
+          <tr><td>take</td><td><strong>took</strong></td><td>nehmen</td></tr>
+          <tr><td>make</td><td><strong>made</strong></td><td>machen</td></tr>
+          <tr><td>buy</td><td><strong>bought</strong></td><td>kaufen</td></tr>
+          <tr><td>bring</td><td><strong>brought</strong></td><td>bringen</td></tr>
+          <tr><td>think</td><td><strong>thought</strong></td><td>denken</td></tr>
+          <tr><td>catch</td><td><strong>caught</strong></td><td>fangen</td></tr>
+          <tr><td>teach</td><td><strong>taught</strong></td><td>lehren</td></tr>
+          <tr><td>eat</td><td><strong>ate</strong></td><td>essen</td></tr>
+          <tr><td>drink</td><td><strong>drank</strong></td><td>trinken</td></tr>
+          <tr><td>swim</td><td><strong>swam</strong></td><td>schwimmen</td></tr>
+          <tr><td>run</td><td><strong>ran</strong></td><td>rennen</td></tr>
+          <tr><td>write</td><td><strong>wrote</strong></td><td>schreiben</td></tr>
+          <tr><td>read</td><td><strong>read</strong></td><td>lesen <em>(gleiche Schreibung, anders gesprochen!)</em></td></tr>
+          <tr><td>say</td><td><strong>said</strong></td><td>sagen</td></tr>
+          <tr><td>tell</td><td><strong>told</strong></td><td>erzählen</td></tr>
+          <tr><td>find</td><td><strong>found</strong></td><td>finden</td></tr>
+          <tr><td>lose</td><td><strong>lost</strong></td><td>verlieren</td></tr>
+          <tr><td>fly</td><td><strong>flew</strong></td><td>fliegen</td></tr>
+          <tr><td>fall</td><td><strong>fell</strong></td><td>fallen</td></tr>
+          <tr><td>sleep</td><td><strong>slept</strong></td><td>schlafen</td></tr>
+          <tr><td>meet</td><td><strong>met</strong></td><td>treffen</td></tr>
+          <tr><td>leave</td><td><strong>left</strong></td><td>verlassen</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:10px"><strong>Gleich bleibend:</strong> cut → cut, hit → hit, put → put, let → let, set → set, hurt → hurt, cost → cost</p>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">5</span> Verneinte Sätze</h2>
+      <p>Verneinung im Simple Past geht mit <span class="hi">didn't</span> + <strong>Grundform</strong> – für ALLE Personen!</p>
+      <div class="ex"><em>I didn't go to school.</em> <span class="sep">·</span> <em>She didn't see the film.</em></div>
+      <p style="margin-top:10px"><strong>Bei <em>to be</em></strong> nimmst du <span class="hi">wasn't</span> oder <span class="hi">weren't</span>:</p>
+      <div class="ex"><em>I wasn't at home.</em> <span class="sep">·</span> <em>They weren't happy.</em></div>
+      <p style="margin-top:10px"><strong>Achtung:</strong> Nach <em>didn't</em> kommt IMMER die Grundform – nie die Vergangenheitsform!</p>
+      <div class="mistake">
+        <div class="icon">❌</div><div class="wrong">She didn't went to school.</div>
+        <div class="icon">✅</div><div class="right">She didn't go to school.</div>
+      </div>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">6</span> Fragen bilden</h2>
+      <p>Fragen im Simple Past bildest du mit <span class="hi">Did</span> + Subjekt + <strong>Grundform</strong>:</p>
+      <div class="ex"><em>Did you watch TV yesterday?</em> <span class="sep">·</span> <em>Did she come home late?</em></div>
+      <p style="margin-top:10px"><strong>W-Fragen</strong>: W-Wort + did + Subjekt + Grundform</p>
+      <div class="ex"><em>Where did you go?</em> <span class="sep">·</span> <em>When did the film start?</em></div>
+      <p style="margin-top:10px"><strong>Bei <em>to be</em></strong> stellst du das Verb einfach voran:</p>
+      <div class="ex"><em>Was she happy?</em> <span class="sep">·</span> <em>Were they at home?</em></div>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">7</span> Kurzantworten</h2>
+      <p>Kurzantworten benutzen das Hilfsverb der Frage:</p>
+      <div class="ex">
+        <em>Did you see him?</em> – <em>Yes, I did.</em> / <em>No, I didn't.</em><br>
+        <em>Were you happy?</em> – <em>Yes, I was.</em> / <em>No, I wasn't.</em>
+      </div>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">8</span> to be – was / were</h2>
+      <p>Das Verb <em>to be</em> ist im Past unregelmäßig und hat zwei Formen:</p>
+      <table class="rule-table">
+        <thead>
+          <tr><th>Person</th><th>Form</th><th>Beispiel</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>I, he, she, it</td><td><strong>was</strong></td><td>I <strong>was</strong> tired.</td></tr>
+          <tr><td>you, we, they</td><td><strong>were</strong></td><td>They <strong>were</strong> happy.</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:10px"><strong>Verneinung:</strong> wasn't / weren't &nbsp; <strong>Frage:</strong> Was…? / Were…?</p>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">9</span> Signalwörter</h2>
+      <p>Diese Wörter zeigen dir: Hier brauchst du Simple Past!</p>
+      <div class="ex">
+        <em>yesterday</em> <span class="sep">·</span> <em>last week / month / year</em> <span class="sep">·</span> <em>… ago</em> (z. B. two days ago)<br>
+        <em>in 2010</em> (Jahreszahlen) <span class="sep">·</span> <em>when</em> (als) <span class="sep">·</span> <em>then</em> (damals)
+      </div>
+      <p style="margin-top:10px"><strong>Merke:</strong> <em>ago</em> bedeutet „vor" und steht immer am Ende: <em>three weeks ago</em>.</p>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">10</span> Häufige Fehler</h2>
+      <p>Diese Stolpersteine solltest du kennen:</p>
+      <div class="mistake">
+        <div class="icon">❌</div><div class="wrong">She goed to school.</div>
+        <div class="icon">✅</div><div class="right">She went to school.</div>
+        <div class="icon">❌</div><div class="wrong">Did he came home?</div>
+        <div class="icon">✅</div><div class="right">Did he come home?</div>
+        <div class="icon">❌</div><div class="wrong">I didn't saw the film.</div>
+        <div class="icon">✅</div><div class="right">I didn't see the film.</div>
+        <div class="icon">❌</div><div class="wrong">She buyed a new car.</div>
+        <div class="icon">✅</div><div class="right">She bought a new car.</div>
+        <div class="icon">❌</div><div class="wrong">We didn't nothing.</div>
+        <div class="icon">✅</div><div class="right">We didn't do anything.</div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ============ TELLING TIME ============ -->
+  <div class="info-content hidden" id="info-time">
+
+    <article class="info-block">
+      <h2><span class="num">1</span> Volle Stunden – o'clock</h2>
+      <p>Bei vollen Stunden sagst du <span class="hi">o'clock</span> nach der Stunde:</p>
+      <div class="ex">
+        <em>It's six o'clock.</em><span class="ger">→ Es ist 6:00 Uhr.</span>
+        <em>It's twelve o'clock.</em><span class="ger">→ Es ist 12:00 Uhr.</span>
+      </div>
+      <p style="margin-top:10px"><strong>Wichtig:</strong> <em>o'clock</em> wird <strong>nur</strong> bei vollen Stunden benutzt – nie bei 3:15, 7:30 usw.</p>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">2</span> Halbe &amp; Viertelstunden</h2>
+      <p>Für 15, 30 und 45 Minuten gibt es feste Ausdrücke:</p>
+      <table class="rule-table">
+        <thead>
+          <tr><th>Uhrzeit</th><th>Langform</th><th>Kurzform</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>3:15</td><td><strong>quarter past</strong> three</td><td>three fifteen</td></tr>
+          <tr><td>3:30</td><td><strong>half past</strong> three</td><td>three thirty</td></tr>
+          <tr><td>3:45</td><td><strong>quarter to</strong> four</td><td>three forty-five</td></tr>
+        </tbody>
+      </table>
+      <div class="mistake">
+        <div class="icon">❌</div><div class="wrong">It's half eight. (= 7:30 im Deutschen)</div>
+        <div class="icon">✅</div><div class="right">7:30 = half past <strong>seven</strong> (eine Stunde weniger denken!)</div>
+      </div>
+      <p style="margin-top:10px"><strong>Achtung:</strong> Deutsches „halb acht" = 7:30 = <em>half past seven</em>. Nicht <em>half past eight</em>!</p>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">3</span> Minuten – past &amp; to</h2>
+      <p>Bis zur halben Stunde nutzt du <span class="hi">past</span> (nach der Stunde),
+      nach der halben Stunde <span class="hi">to</span> (vor der nächsten Stunde):</p>
+      <table class="rule-table">
+        <thead>
+          <tr><th>Uhrzeit</th><th>Ausdruck</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>4:05</td><td>five <strong>past</strong> four</td></tr>
+          <tr><td>4:10</td><td>ten <strong>past</strong> four</td></tr>
+          <tr><td>4:20</td><td>twenty <strong>past</strong> four</td></tr>
+          <tr><td>4:25</td><td>twenty-five <strong>past</strong> four</td></tr>
+          <tr><td>4:35</td><td>twenty-five <strong>to</strong> five</td></tr>
+          <tr><td>4:40</td><td>twenty <strong>to</strong> five</td></tr>
+          <tr><td>4:50</td><td>ten <strong>to</strong> five</td></tr>
+          <tr><td>4:55</td><td>five <strong>to</strong> five</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:10px"><strong>Merksatz:</strong> Bis Minute 30 → <em>past</em>, ab Minute 31 → <em>to</em> (und Stunde +1).</p>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">4</span> Kurzform vs. Langform</h2>
+      <p>Es gibt zwei Arten, eine Uhrzeit auf Englisch zu sagen:</p>
+      <ul>
+        <li><strong>Langform (analog)</strong> – mit past/to/quarter/half
+          <div class="ex"><em>It's quarter past seven.</em> <span class="sep">·</span> <em>It's twenty to nine.</em></div></li>
+        <li><strong>Kurzform (digital)</strong> – einfach Stunde + Minuten
+          <div class="ex"><em>It's seven fifteen.</em> <span class="sep">·</span> <em>It's eight forty.</em></div></li>
+      </ul>
+      <p style="margin-top:10px">Beide Formen sind richtig. Im Alltag häufiger: Langform. Bei Fahrplänen / digitalen Anzeigen: Kurzform.</p>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">5</span> am &amp; pm – 12-Stunden-Format</h2>
+      <p>Im Englischen wird oft das 12-Stunden-Format benutzt – mit am und pm:</p>
+      <table class="rule-table">
+        <thead>
+          <tr><th>Abkürzung</th><th>Bedeutung</th><th>Zeitraum</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>am</strong></td><td>ante meridiem (vor Mittag)</td><td>00:00 – 11:59</td></tr>
+          <tr><td><strong>pm</strong></td><td>post meridiem (nach Mittag)</td><td>12:00 – 23:59</td></tr>
+        </tbody>
+      </table>
+      <div class="ex">
+        <em>7:00 am</em><span class="ger">→ 7:00 Uhr morgens</span>
+        <em>3:30 pm</em><span class="ger">→ 15:30 Uhr (nachmittags)</span>
+      </div>
+      <p style="margin-top:10px"><strong>Besondere Zeiten:</strong>
+        <em>12:00 pm</em> = <strong>noon / midday</strong> (Mittag) ·
+        <em>12:00 am</em> = <strong>midnight</strong> (Mitternacht)</p>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">6</span> 24-Stunden-Format</h2>
+      <p>Offiziell (Fahrpläne, Programme) wird das 24-Stunden-Format genutzt – ohne am/pm:</p>
+      <div class="ex">
+        <em>The train leaves at 14:45.</em><span class="ger">→ Der Zug fährt um 14:45.</span>
+        <em>The film starts at 20:30.</em><span class="ger">→ Der Film beginnt um 20:30.</span>
+      </div>
+      <p style="margin-top:10px"><strong>Umrechnung pm → 24h:</strong> einfach +12 (z. B. 3 pm → 15:00, 9 pm → 21:00).</p>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">7</span> Nach der Uhrzeit fragen</h2>
+      <p>So fragst du höflich nach der Zeit:</p>
+      <div class="ex">
+        <em>What time is it?</em><span class="ger">→ Wie spät ist es?</span>
+        <em>What's the time?</em><span class="ger">→ Wie spät ist es?</span>
+        <em>Could you tell me the time, please?</em><span class="ger">→ Könnten Sie mir die Uhrzeit sagen?</span>
+        <em>Do you have the time?</em><span class="ger">→ Haben Sie die Uhrzeit?</span>
+      </div>
+      <p style="margin-top:10px"><strong>Antwort:</strong> <em>It's [Uhrzeit].</em> oder <em>It is [Uhrzeit].</em></p>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">8</span> Präpositionen mit Zeit</h2>
+      <p>Welche Präposition? Das hängt von der Zeitangabe ab:</p>
+      <table class="rule-table">
+        <thead>
+          <tr><th>Präposition</th><th>Wann?</th><th>Beispiel</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>at</strong></td><td>Uhrzeiten, noon, midnight</td><td>at 8 o'clock, at noon</td></tr>
+          <tr><td><strong>on</strong></td><td>Wochentage, Daten</td><td>on Monday, on 5th May</td></tr>
+          <tr><td><strong>in</strong></td><td>Tagesabschnitte, Monate, Jahre</td><td>in the morning, in May, in 2026</td></tr>
+          <tr><td><strong>from … to</strong></td><td>Zeitraum</td><td>from 9 am to 5 pm</td></tr>
+        </tbody>
+      </table>
+      <div class="mistake">
+        <div class="icon">❌</div><div class="wrong">on 8 o'clock · at Monday · in the night (selten)</div>
+        <div class="icon">✅</div><div class="right">at 8 o'clock · on Monday · in the morning</div>
+      </div>
+      <p style="margin-top:10px"><strong>Sonderfall:</strong> <em>at night</em> (mit „at", nicht „in"!).</p>
+    </article>
+
+    <article class="info-block">
+      <h2><span class="num">9</span> Häufige Fehler</h2>
+      <p>Diese Stolpersteine solltest du kennen:</p>
+      <div class="mistake">
+        <div class="icon">❌</div><div class="wrong">It's three clock.</div>
+        <div class="icon">✅</div><div class="right">It's three <strong>o'clock</strong>.</div>
+      </div>
+      <div class="mistake">
+        <div class="icon">❌</div><div class="wrong">It's half past eight. (für deutsches „halb acht")</div>
+        <div class="icon">✅</div><div class="right">It's half past <strong>seven</strong>. (= 7:30)</div>
+      </div>
+      <div class="mistake">
+        <div class="icon">❌</div><div class="wrong">It's quarter past five (für 5:45)</div>
+        <div class="icon">✅</div><div class="right">It's quarter <strong>to six</strong>. (5:45)</div>
+      </div>
+      <div class="mistake">
+        <div class="icon">❌</div><div class="wrong">15:00 pm</div>
+        <div class="icon">✅</div><div class="right">Entweder <strong>15:00</strong> (24h) oder <strong>3:00 pm</strong> (12h). Nicht mischen!</div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="info-back-wrap">
+    <button class="btn" id="info-back-btn">← Zurück</button>
+  </div>
+</section>

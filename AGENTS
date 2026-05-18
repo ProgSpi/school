@@ -7,8 +7,27 @@ Backend: PHP | Frontend: Vanilla HTML/CSS/JS
 ## Repo-Struktur
 ```
 school/
-├── index.php            # PHP-Einstiegspunkt (rendert index.html oder eigene Views)
-├── index.html           # Haupt-Frontend (Standalone-Fallback)
+├── index.php            # PHP-Einstiegspunkt: routing + HTML-Assembler via include
+├── index.html           # Meta-Refresh-Weiterleitung zu index.php
+├── views/               # PHP-HTML-Partials (included von index.php)
+│   ├── header.php
+│   ├── screen-start.php
+│   ├── screen-info.php
+│   ├── screen-quiz.php
+│   ├── screen-result.php
+│   ├── screen-reading.php
+│   └── footer.php
+├── assets/
+│   ├── css/
+│   │   └── app.css      # Komplettes Stylesheet (aus index.html extrahiert)
+│   └── js/
+│       ├── config.js    # TEST_SIZE, COOKIE_DAYS, MODES
+│       ├── utils.js     # $(), show(), shuffle(), escapeHtml(), formatDate()
+│       ├── state.js     # currentMode, session, currentReading, returnTo
+│       ├── cookies.js   # setCookie, getCookie, Highscore-Logik
+│       ├── quiz.js      # pickQuestions, startNewTest, renderQuestion, finishTest
+│       ├── reading.js   # startQuiz, startReadingTest, renderReadingStory, finishReading
+│       └── events.js    # Alle Event-Listener + Init (renderHighscoreOnStart)
 ├── questions/           # Fragen-Datensätze – nach Fach gruppiert
 │   └── english/         # Unterrichtsfach: Englisch
 │       ├── q_simple_present.js      # var: questions
@@ -30,9 +49,13 @@ school/
 └── .claudeignore        # Dateien/Ordner die Claude ignoriert
 ```
 
+## JS-Ladereihenfolge (index.php)
+`questions/*.js` → `config.js` → `utils.js` → `state.js` → `cookies.js` → `quiz.js` → `reading.js` → `events.js`
+Alle `const`/`let` auf Script-Top-Level sind global (kein Modul-System).
+
 ## Quiz-Zusammensetzung
 Jeder Test enthält **immer 20 Fragen: 16 normale + 4 extra schwere** (hard: true).
-`pickQuestions()` in index.html trennt den Pool und zieht getrennt.
+`pickQuestions()` in `assets/js/quiz.js` trennt den Pool und zieht getrennt.
 
 ## Lesetext-Quiz
 Lesetext-Modi (`readingPresent`, `readingPast`, `readingMixed`) wählen 1 zufälligen Text aus dem Pool.
