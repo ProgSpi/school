@@ -1,7 +1,7 @@
 # AGENTS – School Learning App
 
 ## Projekt-Übersicht
-Eine interaktive Lernapp für Englisch (Klasse 5/6) mit Fokus auf Simple Present und Simple Past.
+Eine interaktive Lernapp für Englisch (Klasse 5/6) mit Subject/Topic-Navigation.
 Backend: PHP | Frontend: Vanilla HTML/CSS/JS
 
 ## Repo-Struktur
@@ -9,14 +9,16 @@ Backend: PHP | Frontend: Vanilla HTML/CSS/JS
 school/
 ├── index.php            # PHP-Einstiegspunkt (rendert index.html oder eigene Views)
 ├── index.html           # Haupt-Frontend (Standalone-Fallback)
-├── questions/           # Fragen-Datensätze als JS-Module
-│   ├── q_eng_simple_present.js
-│   └── q_eng_simple_past.js
+├── questions/           # Fragen-Datensätze – nach Fach gruppiert
+│   └── english/         # Unterrichtsfach: Englisch
+│       ├── q_simple_present.js   # var: questions
+│       ├── q_simple_past.js      # var: questionsPast
+│       └── q_telling_time.js     # var: questionsTellingTime
 ├── api/                 # PHP-API-Endpunkte
 │   └── progress.php
 ├── config/              # PHP-Konfiguration
 │   └── config.php
-├── .agents/             # Agenten-Wissensbasis (nicht committen wenn sensibel)
+├── .agents/             # Agenten-Wissensbasis
 │   ├── architecture     # Systemarchitektur
 │   ├── code-style       # Coding-Konventionen
 │   ├── decisions        # Architekturentscheidungen
@@ -25,6 +27,10 @@ school/
 │   └── testing          # Teststrategie
 └── .claudeignore        # Dateien/Ordner die Claude ignoriert
 ```
+
+## Quiz-Zusammensetzung
+Jeder Test enthält **immer 20 Fragen: 16 normale + 4 extra schwere** (hard: true).
+`pickQuestions()` in index.html trennt den Pool und zieht getrennt.
 
 ## Agenten-Richtlinien
 - Lies `.agents/architecture` bevor du strukturelle Änderungen machst

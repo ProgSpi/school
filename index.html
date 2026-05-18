@@ -237,7 +237,33 @@
     background: linear-gradient(135deg, #fff5e6 0%, #e6f0ea 100%);
   }
   @media (max-width: 720px) {
-    .mode-grid { grid-template-columns: 1fr; gap: 12px; }
+    .mode-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  }
+  @media (max-width: 480px) {
+    .mode-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ========= SUBJECT GROUP ========= */
+  .subject-group {
+    background: rgba(45, 90, 61, 0.04);
+    border: 2px solid rgba(45, 90, 61, 0.15);
+    border-radius: 20px;
+    padding: 18px 18px 4px;
+    margin: 20px 0 28px;
+  }
+  .subject-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .subject-icon { font-size: 1.4rem; }
+  .subject-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--forest-deep);
+    letter-spacing: -0.01em;
   }
 
   .hs-heading {
@@ -350,6 +376,42 @@
     transition: background 0.15s;
   }
   .info-link:hover { background: var(--paper-dark); }
+  .quiz-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .btn-abort {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    padding: 7px 12px;
+    border: 1.5px solid var(--ink);
+    border-radius: 100px;
+    background: white;
+    color: var(--red-bad);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    line-height: 1;
+  }
+  .btn-abort:hover { background: var(--red-bad); color: white; }
+  .abort-confirm {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    background: var(--gold-soft);
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+  .abort-confirm span { flex: 1; min-width: 150px; }
+  .btn-sm { font-size: 0.85rem; padding: 8px 16px; }
 
   /* ========= PROGRESS ========= */
   .progress-wrap { flex: 1; min-width: 200px; }
@@ -893,32 +955,47 @@
   <!-- =================== STARTSEITE =================== -->
   <section id="start" class="start-screen">
     <h1>Ready, <em>steady</em>, go!</h1>
-    <p class="subtitle">Teste dein Wissen zu den englischen Zeitformen – 20 zufällige Fragen pro Test.</p>
+    <p class="subtitle">Teste dein Wissen – 20 Fragen pro Test (16 normal + 4 extra schwer).</p>
 
-    <div class="mode-grid">
-      <button class="mode-card" data-mode="present">
-        <div class="mode-icon">📘</div>
-        <div class="mode-title">Simple Present</div>
-        <div class="mode-desc">Was passiert <em>regelmäßig</em> oder allgemein.<br><span class="ex">She <strong>plays</strong> tennis.</span></div>
-        <div class="mode-meta">120 Fragen im Pool</div>
-        <div class="mode-cta">Test starten →</div>
-      </button>
+    <div class="subject-group">
+      <div class="subject-header">
+        <span class="subject-icon">🇬🇧</span>
+        <span class="subject-name">Englisch</span>
+      </div>
 
-      <button class="mode-card" data-mode="past">
-        <div class="mode-icon">📙</div>
-        <div class="mode-title">Simple Past</div>
-        <div class="mode-desc">Was <em>früher</em> passiert ist – abgeschlossen.<br><span class="ex">She <strong>played</strong> tennis yesterday.</span></div>
-        <div class="mode-meta">120 Fragen im Pool</div>
-        <div class="mode-cta">Test starten →</div>
-      </button>
+      <div class="mode-grid">
+        <button class="mode-card" data-mode="present">
+          <div class="mode-icon">📘</div>
+          <div class="mode-title">Simple Present</div>
+          <div class="mode-desc">Was passiert <em>regelmäßig</em> oder allgemein.<br><span class="ex">She <strong>plays</strong> tennis.</span></div>
+          <div class="mode-meta">120 Fragen im Pool</div>
+          <div class="mode-cta">Test starten →</div>
+        </button>
 
-      <button class="mode-card mode-card-mixed" data-mode="mixed">
-        <div class="mode-icon">🎲</div>
-        <div class="mode-title">Mixed Mode</div>
-        <div class="mode-desc">Beide Zeitformen <em>bunt gemischt</em> – die Königsdisziplin.<br><span class="ex">Erkennst du den Unterschied?</span></div>
-        <div class="mode-meta">240 Fragen im Pool</div>
-        <div class="mode-cta">Test starten →</div>
-      </button>
+        <button class="mode-card" data-mode="past">
+          <div class="mode-icon">📙</div>
+          <div class="mode-title">Simple Past</div>
+          <div class="mode-desc">Was <em>früher</em> passiert ist – abgeschlossen.<br><span class="ex">She <strong>played</strong> tennis yesterday.</span></div>
+          <div class="mode-meta">120 Fragen im Pool</div>
+          <div class="mode-cta">Test starten →</div>
+        </button>
+
+        <button class="mode-card" data-mode="time">
+          <div class="mode-icon">🕐</div>
+          <div class="mode-title">Telling Time</div>
+          <div class="mode-desc">Uhrzeiten auf Englisch – o'clock, half past, quarter to.<br><span class="ex">It's <strong>quarter past</strong> three.</span></div>
+          <div class="mode-meta">60 Fragen im Pool</div>
+          <div class="mode-cta">Test starten →</div>
+        </button>
+
+        <button class="mode-card mode-card-mixed" data-mode="mixed">
+          <div class="mode-icon">🎲</div>
+          <div class="mode-title">Mixed Mode</div>
+          <div class="mode-desc">Alle Themen <em>bunt gemischt</em> – die Königsdisziplin.<br><span class="ex">Erkennst du alles?</span></div>
+          <div class="mode-meta">300 Fragen im Pool</div>
+          <div class="mode-cta">Test starten →</div>
+        </button>
+      </div>
     </div>
 
     <h2 class="hs-heading">🏆 Deine Highscores</h2>
@@ -1278,7 +1355,16 @@
         </div>
         <div class="progress-bar"><div class="progress-fill" id="bar"></div></div>
       </div>
-      <button class="info-link" id="goto-info-from-quiz">📖 Info</button>
+      <div class="quiz-top-actions">
+        <button class="info-link" id="goto-info-from-quiz">📖 Info</button>
+        <button class="btn-abort" id="abort-btn" title="Test abbrechen">✕</button>
+      </div>
+    </div>
+
+    <div id="abort-confirm" class="abort-confirm hidden">
+      <span>Test wirklich abbrechen?</span>
+      <button id="abort-yes" class="btn btn-coral btn-sm">Ja, abbrechen</button>
+      <button id="abort-no" class="btn btn-ghost btn-sm">Weiter üben</button>
     </div>
 
     <div class="question-card">
@@ -1331,8 +1417,9 @@
 
 </div>
 
-<script src="questions/q_eng_simple_present.js"></script>
-<script src="questions/q_eng_simple_past.js"></script>
+<script src="questions/english/q_simple_present.js"></script>
+<script src="questions/english/q_simple_past.js"></script>
+<script src="questions/english/q_telling_time.js"></script>
 <script>
   // ============ CONFIG ============
   const TEST_SIZE = 20;
@@ -1342,6 +1429,7 @@
       label: 'Simple Present',
       shortLabel: 'Present',
       icon: '📘',
+      subject: 'english',
       cookieName: 'simplepresent_highscore',
       getPool: () => questions
     },
@@ -1349,15 +1437,25 @@
       label: 'Simple Past',
       shortLabel: 'Past',
       icon: '📙',
+      subject: 'english',
       cookieName: 'simplepast_highscore',
       getPool: () => questionsPast
+    },
+    time: {
+      label: 'Telling Time',
+      shortLabel: 'Uhrzeit',
+      icon: '🕐',
+      subject: 'english',
+      cookieName: 'tellingtime_highscore',
+      getPool: () => questionsTellingTime
     },
     mixed: {
       label: 'Mixed Mode',
       shortLabel: 'Mixed',
       icon: '🎲',
+      subject: 'english',
       cookieName: 'mixed_highscore',
-      getPool: () => questions.concat(questionsPast)
+      getPool: () => questions.concat(questionsPast).concat(questionsTellingTime)
     }
   };
 
@@ -1451,7 +1549,9 @@
   }
   function pickQuestions(modeKey) {
     const pool = MODES[modeKey].getPool();
-    return shuffle(pool).slice(0, TEST_SIZE);
+    const normal = shuffle(pool.filter(q => !q.hard)).slice(0, 16);
+    const hard   = shuffle(pool.filter(q => q.hard)).slice(0, 4);
+    return shuffle([...normal, ...hard]);
   }
 
   // ============ TEST LIFECYCLE ============
@@ -1467,6 +1567,7 @@
     };
     $('total').textContent = TEST_SIZE;
     $('quiz-mode-label').textContent = `${MODES[currentMode].icon} ${MODES[currentMode].label}`;
+    $('abort-confirm').classList.add('hidden');
     show('quiz');
     renderQuestion();
   }
@@ -1743,6 +1844,19 @@
   }
   document.querySelectorAll('.info-tab').forEach(t => {
     t.addEventListener('click', () => switchInfoTab(t.dataset.tab));
+  });
+
+  $('abort-btn').addEventListener('click', () => {
+    $('abort-confirm').classList.remove('hidden');
+  });
+  $('abort-yes').addEventListener('click', () => {
+    session = null;
+    $('abort-confirm').classList.add('hidden');
+    renderHighscoreOnStart();
+    show('start');
+  });
+  $('abort-no').addEventListener('click', () => {
+    $('abort-confirm').classList.add('hidden');
   });
 
   $('prev-btn').addEventListener('click', goPrev);

@@ -19,6 +19,14 @@
   - `.claudeignore`
   - PHP-Grundstruktur angelegt
 
+### Abgeschlossen (Runde 2)
+- [x] Subject/Topic-Struktur: `questions/english/` Unterordner
+- [x] Start-Screen: Subject-Header "Englisch" + 4 Topic-Karten
+- [x] Neues Thema: Telling Time in English (60 Fragen, `q_telling_time.js`)
+- [x] Quiz-Zusammensetzung: immer 16 Normal + 4 Hard (`pickQuestions()` angepasst)
+- [x] Test-Abbrechen-Funktion: Button + Inline-Confirm-Banner im Quiz-Screen
+- [x] Mixed Mode erweitert auf alle 3 englischen Themen (300 Fragen im Pool)
+
 ### In Arbeit
 - [ ] PHP-Backend
   - `index.php` – PHP-Einstiegspunkt
