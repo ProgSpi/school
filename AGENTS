@@ -7,8 +7,10 @@ Backend: PHP | Frontend: Vanilla HTML/CSS/JS
 ## Repo-Struktur
 ```
 school/
-├── index.php            # PHP-Einstiegspunkt: routing + HTML-Assembler via include
-├── index.html           # Meta-Refresh-Weiterleitung zu index.php
+├── index.php            # PHP-Einstiegspunkt: routing + HTML-Assembler via include (für PHP-Hosting)
+├── index.html           # Build-Output von build.sh (für GitHub Pages / statisches Hosting)
+├── build.sh             # Konkateniert views/*.php zu statischer index.html
+├── .nojekyll            # Deaktiviert Jekyll-Verarbeitung auf GitHub Pages
 ├── views/               # PHP-HTML-Partials (included von index.php)
 │   ├── header.php
 │   ├── screen-start.php
@@ -49,7 +51,11 @@ school/
 └── .claudeignore        # Dateien/Ordner die Claude ignoriert
 ```
 
-## JS-Ladereihenfolge (index.php)
+## Deployment
+- **GitHub Pages / statisch**: `bash build.sh` → `index.html` committen → push
+- **PHP-Hosting**: `index.php` aufrufen — nutzt direkt `views/*.php` per include
+
+## JS-Ladereihenfolge (index.php / build.sh)
 `questions/*.js` → `config.js` → `utils.js` → `state.js` → `cookies.js` → `quiz.js` → `reading.js` → `events.js`
 Alle `const`/`let` auf Script-Top-Level sind global (kein Modul-System).
 

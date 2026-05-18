@@ -57,6 +57,12 @@
 - [x] `index.php` baut die Seite via PHP `include` zusammen (kein `readfile` mehr)
 - [x] `index.html` = Meta-Refresh-Weiterleitung zu `index.php`
 
+### Abgeschlossen (Runde 5 – GitHub Pages Build)
+- [x] `build.sh` — konkateniert `views/*.php` zu statischer `index.html`
+- [x] `.nojekyll` — deaktiviert Jekyll auf GH Pages
+- [x] `index.html` ist jetzt Build-Output (kein Meta-Refresh mehr); funktioniert ohne PHP
+- [x] `index.php` bleibt parallel erhalten für PHP-Hosting / lokale Entwicklung
+
 ### Geplant
 - [ ] Datenbank-Schema für Fortschritt (SQLite für einfaches Hosting)
 - [ ] Nutzer-Fortschritt serverseitig speichern (optional: ohne Login, Cookie-basiert)
