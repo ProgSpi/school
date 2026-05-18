@@ -1,0 +1,41 @@
+# Implementierungsfortschritt
+
+## Status: Grundgerüst bereit
+
+### Abgeschlossen
+- [x] Frontend-App (index.html) – vollständig funktionsfähig
+  - Quiz-Modi: Normal, Schwer, Fehler-Wiederholung
+  - Themen: Simple Present, Simple Past, Gemischt
+  - Fragen-Typen: Multiple Choice, Texteingabe
+  - Ergebnis-Screen mit Bewertung und Highscore
+  - Info-Screen mit Grammatik-Erklärungen
+  - Responsive Design (Mobile + Desktop)
+- [x] Fragen-Datensätze
+  - `questions/q_eng_simple_present.js` – 100 Fragen
+  - `questions/q_eng_simple_past.js` – 120 Fragen (inkl. 20 Extra-Schwer)
+- [x] VipeCoding-Umgebung eingerichtet
+  - `.agents/` mit allen Wissensdateien
+  - `AGENTS` Root-Datei
+  - `.claudeignore`
+  - PHP-Grundstruktur angelegt
+
+### In Arbeit
+- [ ] PHP-Backend
+  - `index.php` – PHP-Einstiegspunkt
+  - `api/progress.php` – Fortschritts-API
+  - `config/config.php` – Datenbank/App-Konfiguration
+
+### Geplant
+- [ ] Datenbank-Schema für Fortschritt (SQLite für einfaches Hosting)
+- [ ] Nutzer-Fortschritt serverseitig speichern (optional: ohne Login, Cookie-basiert)
+- [ ] Highscore-Liste (klassenweite Bestenliste)
+- [ ] Weitere Themen: Simple Future, Present Perfect
+- [ ] Admin-Interface zum Hinzufügen/Bearbeiten von Fragen
+- [ ] Lehrer-Dashboard (Klassen-Überblick)
+
+## Fragen-Statistik
+| Datei                     | Thema          | Anzahl | Hard |
+|---------------------------|----------------|--------|------|
+| q_eng_simple_present.js   | Simple Present | 100    | –    |
+| q_eng_simple_past.js      | Simple Past    | 120    | 20   |
+| **Gesamt**                |                | **220**| **20**|

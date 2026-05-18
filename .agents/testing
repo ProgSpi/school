@@ -1,0 +1,64 @@
+# Teststrategie
+
+## Aktuelle Situation
+Kein automatisiertes Test-Framework. Tests sind manuell und über Browser-DevTools.
+
+## Manuelle Checkliste – Frontend
+
+### Startseite
+- [ ] Alle 3 Themen wählbar (Present, Past, Gemischt)
+- [ ] Alle 3 Modi wählbar (Normal, Schwer, Fehler-Wiederholung)
+- [ ] "Fehler-Wiederholung" deaktiviert wenn keine Fehler gespeichert
+
+### Quiz
+- [ ] Multiple-Choice: genau eine Antwort auswählbar
+- [ ] Texteingabe: Enter-Taste bestätigt, case-insensitiv
+- [ ] Richtige Antwort: grüne Markierung + Erklärung
+- [ ] Falsche Antwort: rote Markierung, korrekte Antwort anzeigen
+- [ ] Fortschrittsbalken aktualisiert sich
+- [ ] Navigation: Zurück/Weiter funktioniert, Springen per Fragen-Nummern
+
+### Ergebnis-Screen
+- [ ] Punktzahl korrekt berechnet
+- [ ] Prozent korrekt
+- [ ] Note korrekt (≥90%=1, ≥75%=2, ≥60%=3, ≥45%=4, ≥25%=5, sonst=6)
+- [ ] Highscore wird gespeichert und angezeigt
+- [ ] "Neu starten" kehrt zur Startseite zurück
+- [ ] "Fehler wiederholen" startet neuen Quiz mit falschen Antworten
+
+### Datenpersistenz
+- [ ] Highscore bleibt nach Seiten-Reload
+- [ ] Highscore bleibt nach Browser-Neustart
+- [ ] Fehler-Liste bleibt für Wiederholung
+
+### Responsive
+- [ ] Mobile (375px): kein horizontaler Scroll
+- [ ] Tablet (768px): Layout intakt
+- [ ] Desktop (1200px): max-width zentriert
+
+## PHP-Tests (sobald implementiert)
+
+### Unit-Tests (PHPUnit)
+```bash
+./vendor/bin/phpunit tests/
+```
+
+### API-Tests (curl)
+```bash
+# Fortschritt abrufen
+curl -s http://localhost/api/progress.php
+
+# Fortschritt speichern
+curl -s -X POST http://localhost/api/progress.php \
+  -H "Content-Type: application/json" \
+  -d '{"mode":"present","score":18,"total":20}'
+```
+
+## Browser-Kompatibilität
+Pflicht: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
+Optional: Mobile Safari iOS 14+, Chrome Android
+
+## Bekannte Lücken
+- Kein automatischer JavaScript-Test
+- Kein Accessibility-Audit (WCAG)
+- Kein Performance-Budget definiert

@@ -1,0 +1,46 @@
+# Gotchas & bekannte Fallstricke
+
+## JavaScript
+
+### Globale Variablen der Fragen-Dateien
+`questions/q_eng_simple_present.js` setzt `window.questions` (= `const questions`).
+`questions/q_eng_simple_past.js` setzt `window.questionsPast`.
+Die Reihenfolge der `<script>`-Tags in index.html ist entscheidend – sie MÜSSEN
+vor dem App-`<script>`-Block geladen sein.
+
+### localStorage in Private-Browsing-Modus
+In Safari (privat) wirft `localStorage.setItem()` eine Exception.
+Der Code nutzt try/catch + Cookie-Fallback. Dieses Muster beibehalten!
+
+### Fragen-IDs sind pro Datei einzigartig, aber nicht global
+`q_eng_simple_present.js` und `q_eng_simple_past.js` haben beide `id: 1`.
+Im gemischten Modus werden IDs mit Präfix versehen: `p1`, `pp1`.
+Beim Hinzufügen neuer Fragen-Dateien dasselbe Präfix-Muster übernehmen.
+
+### `text`-Fragen: `correct` ist ein Array
+Bei `type: "text"` ist `correct` ein Array von akzeptierten Schreibweisen (Kleinbuchstaben).
+Beim Prüfen immer `.toLowerCase().trim()` auf Nutzereingabe anwenden.
+
+## PHP (geplant)
+
+### Kein `.htaccess` auf allen Hosts
+Shared-Hosting unterstützt nicht immer `mod_rewrite`. API-Pfade direkt als
+`/api/progress.php` adressieren, kein URL-Rewriting voraussetzen.
+
+### Zeichenkodierung
+`header('Content-Type: application/json; charset=utf-8')` immer setzen.
+PHP gibt sonst manchmal falsche Encoding-Header aus, besonders auf Windows-Hosts.
+
+### Session-Konflikte
+Wenn PHP Sessions für User-Tracking genutzt werden: `session_start()` muss
+VOR jeder Ausgabe aufgerufen werden. Kein Whitespace/BOM vor `<?php`.
+
+## CSS
+
+### Custom Properties und IE
+Die App nutzt CSS Custom Properties (`var(--forest)`). IE11 wird nicht unterstützt –
+kein Polyfill nötig, aber auch kein IE-Fallback einbauen.
+
+### Fraunces / Nunito Google Fonts
+Die Fonts werden von Google Fonts geladen. Offline oder bei langsamer Verbindung
+fallen sie auf System-Fonts zurück. Das ist gewollt – kein lokales Font-Hosting nötig.

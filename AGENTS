@@ -1,0 +1,45 @@
+# AGENTS – School Learning App
+
+## Projekt-Übersicht
+Eine interaktive Lernapp für Englisch (Klasse 5/6) mit Fokus auf Simple Present und Simple Past.
+Backend: PHP | Frontend: Vanilla HTML/CSS/JS
+
+## Repo-Struktur
+```
+school/
+├── index.php            # PHP-Einstiegspunkt (rendert index.html oder eigene Views)
+├── index.html           # Haupt-Frontend (Standalone-Fallback)
+├── questions/           # Fragen-Datensätze als JS-Module
+│   ├── q_eng_simple_present.js
+│   └── q_eng_simple_past.js
+├── api/                 # PHP-API-Endpunkte
+│   └── progress.php
+├── config/              # PHP-Konfiguration
+│   └── config.php
+├── .agents/             # Agenten-Wissensbasis (nicht committen wenn sensibel)
+│   ├── architecture     # Systemarchitektur
+│   ├── code-style       # Coding-Konventionen
+│   ├── decisions        # Architekturentscheidungen
+│   ├── gotchas          # Bekannte Fallstricke
+│   ├── progress         # Implementierungsfortschritt
+│   └── testing          # Teststrategie
+└── .claudeignore        # Dateien/Ordner die Claude ignoriert
+```
+
+## Agenten-Richtlinien
+- Lies `.agents/architecture` bevor du strukturelle Änderungen machst
+- Lies `.agents/code-style` bevor du neuen Code schreibst
+- Lies `.agents/decisions` um vergangene Entscheidungen zu verstehen
+- Trage neue Erkenntnisse in `.agents/gotchas` ein
+- Aktualisiere `.agents/progress` nach jeder größeren Implementierung
+- Folge `.agents/testing` für alle Tests
+
+## Wichtige Konventionen
+- PHP: PSR-12, keine kurzen Tags (`<?` verboten, nur `<?php`)
+- JS: Vanilla JS, kein Framework, ES2020+
+- CSS: BEM-ähnlich, Custom Properties für alle Farben/Abstände
+- Fragen-Dateien in `questions/` – nie direkt im Root
+
+## Sprache
+- Code, Kommentare: Englisch
+- UI-Texte, Dokumentation: Deutsch (da Zielgruppe Schüler)

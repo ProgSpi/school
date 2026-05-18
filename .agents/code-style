@@ -1,0 +1,62 @@
+# Code-Style
+
+## PHP
+- Standard: PSR-12
+- Tags: NUR `<?php` – niemals `<?` oder `<?=` (außer in Blade/Template-Dateien)
+- Strings: einfache Anführungszeichen bevorzugen (`'text'`)
+- Typen: strict_types=1 in jedem File
+- Fehlerbehandlung: try/catch, keine `@`-Unterdrückung
+- Kommentare: auf Englisch, nur wenn das WARUM unklar ist
+
+```php
+<?php
+declare(strict_types=1);
+
+function getProgress(int $userId): array {
+    // ...
+}
+```
+
+## JavaScript
+- Standard: ES2020+, Vanilla JS, kein Framework
+- `const` bevorzugen, `let` wenn nötig, niemals `var`
+- Arrow Functions für Callbacks
+- Template Literals statt String-Konkatenation
+- Keine Semikolon-Ausnahmen (immer Semikolon)
+
+```js
+const loadQuestions = (mode) => {
+  return mode === 'past' ? questionsPast : questions;
+};
+```
+
+## Fragen-Datensatz-Format (questions/*.js)
+```js
+const questions = [
+  {
+    id: 1,
+    type: "mc",          // "mc" | "text"
+    q: "Fragetext",
+    options: ["A", "B", "C"],   // nur bei mc
+    correct: "B",               // String oder Array bei text
+    explain: "Erklärung",
+    hard: false                 // optional, Extra-Schwer-Markierung
+  }
+];
+```
+
+## CSS
+- Custom Properties für alle Farben: `var(--forest)`, `var(--coral)` etc.
+- BEM-ähnliche Klassen: `.quiz-card`, `.quiz-card__title`, `.quiz-card--active`
+- Kein `!important` außer bei Utility-Overrides
+- Mobile-first: Breakpoint bei `max-width: 540px`
+
+## HTML
+- Semantische Tags: `<header>`, `<main>`, `<footer>`, `<section>`
+- `data-*` Attribute für JS-Hooks, keine `id`-Selektion in JS wenn vermeidbar
+- `lang="de"` auf `<html>`
+
+## Git
+- Commit-Messages: Englisch, Imperativ: "Add PHP progress API"
+- Branch-Namen: `feature/`, `fix/`, `chore/`
+- Keine geminifizierte oder generierte Dateien committen

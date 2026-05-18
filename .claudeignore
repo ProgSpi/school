@@ -1,0 +1,36 @@
+# Claude ignoriert diese Dateien/Ordner
+
+# Abhängigkeiten
+vendor/
+node_modules/
+
+# Laufzeit & Caches
+*.log
+*.cache
+/tmp/
+/cache/
+
+# Datenbanken & Uploads
+*.sqlite
+*.db
+/uploads/
+/storage/
+
+# Umgebungs-Konfiguration
+.env
+.env.*
+config/local.php
+
+# Build-Artefakte
+/dist/
+/build/
+
+# IDE & OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Sicherung
+*.bak
+*.orig

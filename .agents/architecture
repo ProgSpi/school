@@ -1,0 +1,50 @@
+# Architektur
+
+## Überblick
+Die App ist eine Single-Page-Application (SPA) mit optionalem PHP-Backend.
+
+## Frontend-Schichten
+```
+Browser
+  └── index.html / index.php
+        ├── CSS (inline in <style>) – kein externes Stylesheet
+        ├── questions/*.js – Fragen-Datensätze (Arrays)
+        └── <script> Block (inline) – App-Logik
+```
+
+## App-Zustand (JS)
+- `currentScreen`: "start" | "quiz" | "result" | "info"
+- `activeMode`: "present" | "past" | "mixed"
+- `quizMode`: "normal" | "hard" | "mistakes"
+- `currentQuestions[]`: aktiver Fragen-Satz (gemischt aus questions/*.js)
+- `answers{}`: Nutzerantworten je Frage-ID
+- Highscores per Modus in localStorage / Cookie
+
+## Backend (PHP, geplant)
+```
+Browser <─── JSON ───> api/progress.php
+                             │
+                        config/config.php
+                             │
+                         SQLite / MySQL
+```
+
+### API-Endpunkte (geplant)
+| Methode | Pfad                 | Beschreibung               |
+|---------|----------------------|----------------------------|
+| GET     | /api/progress.php    | Fortschritt laden           |
+| POST    | /api/progress.php    | Fortschritt speichern       |
+| GET     | /api/highscores.php  | Bestenliste (optional)      |
+
+## Datenfluss (Fragen)
+1. Browser lädt `questions/q_eng_simple_present.js` → setzt `window.questions`
+2. Browser lädt `questions/q_eng_simple_past.js` → setzt `window.questionsPast`
+3. JS-App mischt/filtert je nach gewähltem Modus
+
+## Speicherung (aktuell)
+- localStorage: Highscores (`hs_*`), letzte Session
+- Cookie: Fallback für private Browsing
+
+## Skalierung
+- Neue Themen: neue Datei in `questions/` + Registrierung in index.html
+- Neue Sprachen: neuer Unter-Namespace, z.B. `questions/q_de_*.js`
